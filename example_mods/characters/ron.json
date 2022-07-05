@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				-210
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "IDLE"
+		},
+		{
+			"offsets": [
+				0,
+				-270
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				124,
+				-80
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				80,
+				-140
+			],
+			"anim": "ronck",
+			"fps": 24,
+			"name": "the ronck",
+			"indices": []
+		},
+		{
+			"offsets": [
+				61,
+				-210
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singLEFT",
+			"loop": false,
+			"name": "right"
+		},
+		{
+			"offsets": [
+				-10,
+				-220
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "left"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/ronIce",
+	"position": [
+		0,
+		0
+	],
+	"healthicon": "ron",
+	"flip_x": false,
+	"healthbar_colors": [
+		255,
+		216,
+		0
+	],
+	"camera_position": [
+		-40,
+		190
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}
