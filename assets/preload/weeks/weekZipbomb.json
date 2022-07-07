@@ -1,0 +1,50 @@
+{
+	"songs": [
+		[
+			"Steve",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Jimmy",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Mike",
+			"dad",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "",
+	"weekCharacters": [
+		"",
+		"bf",
+		"gf"
+	],
+	"storyName": "Zipbomb moment",
+	"weekName": "Zipbomb",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}
