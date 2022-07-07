@@ -78,8 +78,8 @@ class Character extends FlxSprite
 	public var originalFlipX:Bool = false;
 	public var healthColorArray:Array<Int> = [255, 0, 0];
 
-	public static var DEFAULT_CHARACTER:String = 'bf'; //In case a character is missing, it will use BF on its place
-	public function new(x:Float, y:Float, ?character:String = 'bf', ?isPlayer:Bool = false)
+	public static var DEFAULT_CHARACTER:String = 'bb'; //In case a character is missing, it will use BB on its place
+	public function new(x:Float, y:Float, ?character:String = 'bb', ?isPlayer:Bool = false)
 	{
 		super(x, y);
 
@@ -111,7 +111,7 @@ class Character extends FlxSprite
 				if (!Assets.exists(path))
 				#end
 				{
-					path = Paths.getPreloadPath('characters/' + DEFAULT_CHARACTER + '.json'); //If a character couldn't be found, change him to BF just to prevent a crash
+					path = Paths.getPreloadPath('characters/' + DEFAULT_CHARACTER + '.json'); //If a character couldn't be found, change him to BB just to prevent a crash
 				}
 
 				#if MODS_ALLOWED
@@ -224,8 +224,8 @@ class Character extends FlxSprite
 		{
 			flipX = !flipX;
 
-			/*// Doesn't flip for BF, since his are already in the right place???
-			if (!curCharacter.startsWith('bf'))
+			/*// Doesn't flip for BB, since his are already in the right place???
+			if (!curCharacter.startsWith('bb'))
 			{
 				// var animArray
 				if(animation.getByName('singLEFT') != null && animation.getByName('singRIGHT') != null)
