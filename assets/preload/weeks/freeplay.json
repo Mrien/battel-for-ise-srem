@@ -1,7 +1,7 @@
 {
-	"storyName": "GIVE ME THE FUCKING ICE CREAM",
-	"difficulties": "Hard, Cool",
-	"hideFreeplay": true,
+	"storyName": "Extra Songs",
+	"difficulties": "Extra",
+	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "",
 	"freeplayColor": [
@@ -10,32 +10,23 @@
 		253
 	],
 	"startUnlocked": true,
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"songs": [
 		[
-			"Iced",
+			"Surprised",
 			"ron",
 			[
 				255,
 				216,
 				0
 			]
-		],
-		[
-			"Murky",
-			"ron",
-			[
-				100,
-				80,
-				0
-			]
 		]
 	],
 	"weekCharacters": [
-		"ron",
+		"dad",
 		"bf",
 		"gf"
 	],
 	"hiddenUntilUnlocked": false,
-	"weekName": "Ice Cream"
+	"weekName": "Extra"
 }

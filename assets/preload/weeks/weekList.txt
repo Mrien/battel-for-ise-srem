@@ -1,2 +1,4 @@
 weekRon
 weekZipbomb
+freeplay
+AAAA
