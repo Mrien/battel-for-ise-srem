@@ -1,7 +1,7 @@
 {
 	"storyName": "GIVE ME THE FUCKING ICE CREAM",
-	"difficulties": "Hard, Cool",
-	"hideFreeplay": true,
+	"difficulties": "Easy, Normal, Hard, Cool",
+	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "",
 	"freeplayColor": [
@@ -23,7 +23,16 @@
 		],
 		[
 			"Murky",
-			"ron",
+			"ronannoyed",
+			[
+				100,
+				80,
+				0
+			]
+		],
+		[
+			"Third Song",
+			"ronmad",
 			[
 				100,
 				80,

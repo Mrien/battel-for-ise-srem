@@ -29,9 +29,9 @@
 		]
 	],
 	"hiddenUntilUnlocked": false,
-	"hideFreeplay": true,
+	"hideFreeplay": false,
 	"weekBackground": "stage",
-	"difficulties": "Hard, Cool",
+	"difficulties": "Hard",
 	"weekCharacters": [
 		"",
 		"bf",
