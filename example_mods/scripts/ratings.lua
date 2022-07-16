@@ -83,7 +83,7 @@ function onUpdate()
 	end
 	--F rating code
 	
-    elseif rating <= 0.20 then
+    elseif rating <= 0.20 and ratings.animation ~= '?' then
 		function onBeatHit()
 			if curBeat % 2 == 0 then
 				objectPlayAnimation('ratings','F',false)

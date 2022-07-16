@@ -12,11 +12,7 @@ function onCreatePost()
         setTextAlignment("songComposer", "left")
         addLuaText("songComposer")
      
-        makeLuaText("message", "Ron Engine (Modified PE "..version..")", 500, 30, 50)
-        setTextAlignment("message", "left")
-        addLuaText("message")
-
-        makeLuaText("engineText", "Iced Cool - VS Ron: TBFTIC", 500, 30, 30)
+        makeLuaText("engineText", "Ron Engine (Modified PE "..version..")", 500, 30, 50)
         setTextAlignment("engineText", "left")
         addLuaText("engineText")
 
@@ -24,33 +20,27 @@ function onCreatePost()
             setProperty('message3.y', 680)
             setProperty('message2.y', 660)
             setProperty('songComposer.y', 640)
-            setProperty('message.y', 620)
-            setProperty('engineText.y', 600)
+            setProperty('engineText.y', 620)
         end
     else 
         makeLuaText("songComposer", "Composed by morry", 500, 30, 70)
         setTextAlignment("songComposer", "left")
         addLuaText("songComposer")
      
-        makeLuaText("message", "Ron Engine (Modified PE "..version..")", 500, 30, 50)
-        setTextAlignment("message", "left")
-        addLuaText("message")
-
-        makeLuaText("engineText", "Iced - VS Ron: TBFTIC", 500, 30, 30)
+        makeLuaText("engineText", "Ron Engine (Modified PE "..version..")", 500, 30, 50)
         setTextAlignment("engineText", "left")
         addLuaText("engineText")
 
         if getPropertyFromClass('ClientPrefs', 'downScroll') == false then
             setProperty('songComposer.y', 680)
-            setProperty('message.y', 660)
-            setProperty('engineText.y', 640)
+            setProperty('engineText.y', 660)
         end
     end
 end
 
 function opponentNoteHit()
     health = getProperty('health')
-    if getProperty('health') > 0.01 then
-        setProperty('health', health- 0.01);
+    if getProperty('health') > 0.005 then
+        setProperty('health', health- 0.005);
     end
 end
