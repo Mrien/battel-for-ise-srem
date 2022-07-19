@@ -10,4 +10,5 @@ function onCreatePost()
     if getPropertyFromClass('ClientPrefs', 'downScroll') == false then
         setProperty('songComposer.y', 680)
         setProperty('engineText.y', 660)
+    end
 end
