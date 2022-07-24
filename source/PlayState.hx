@@ -1299,6 +1299,16 @@ class PlayState extends MusicBeatState
 
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
+				
+				case "bloodline":
+					if(FlxG.save.data.distractions){
+						// trailArea.scrollFactor.set();
+						var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+						// evilTrail.changeValuesEnabled(false, false, false, false);
+						// evilTrail.changeGraphic()
+						add(evilTrail);
+						// evilTrail.scrollFactor.set(1.1, 1.1);
+						}
 
 				default:
 					startCountdown();
