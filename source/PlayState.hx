@@ -193,7 +193,8 @@ class PlayState extends MusicBeatState
 
 	public var botplaySine:Float = 0;
 	public var botplayTxt:FlxText;
-
+    
+	public var icecreamIcon:FlxSprite;
 	public var iconP1:HealthIcon;
 	public var iconP2:HealthIcon;
 	public var camHUD:FlxCamera;
@@ -804,6 +805,8 @@ class PlayState extends MusicBeatState
 		{
 			case 'stress':
 				GameOverSubstate.characterName = 'bf-holding-gf-dead';
+			case 'rushed':
+				GameOverSubstate.characterName = 'bf-dead';
 		}
 
 		if(isPixelStage) {
@@ -1155,6 +1158,13 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
 
+		icecreamIcon  = new FlxSprite();
+		icecreamIcon.loadGraphic("shared/images/icecreamIcon.png");
+		icecreamIcon.y = healthBar.y - 75;
+		icecreamIcon.visible = !ClientPrefs.hideHud;
+		icecreamIcon.alpha = ClientPrefs.healthBarAlpha;
+		add(icecreamIcon);
+
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
 		iconP1.visible = !ClientPrefs.hideHud;
@@ -1190,6 +1200,7 @@ class PlayState extends MusicBeatState
 		notes.cameras = [camHUD];
 		healthBar.cameras = [camHUD];
 		healthBarBG.cameras = [camHUD];
+		icecreamIcon.cameras = [camHUD];
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
@@ -2922,6 +2933,7 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
+        icecreamIcon.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * icecreamIcon.scale.x - 150) / 2 - iconOffset;
 		iconP1.x = 825;
 		iconP2.x = 285;
 
@@ -5037,14 +5049,14 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				switch(achievementName)
 				{
-					case 'weekRon_nomiss':
-						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+					case 'weekRon_beat':
+						if(isStoryMode && campaignMisses + CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
 							switch(weekName) //I know this is a lot of duplicated code, but it's easier readable and you can add weeks with different names than the achievement tag
 							{
 								case 'weekRon':
-									if(achievementName == 'weekRon_nomiss') unlock = true;
+									if(achievementName == 'weekRon_beat') unlock = true;
 							}
 						}
 					case 'ur_bad':

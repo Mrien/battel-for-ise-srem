@@ -1,7 +1,7 @@
 {
 	"song": {
 		"player1": "bf",
-		"gfVersion": "bb",
+		"gfVersion": "gf",
 		"notes": [
 			{
 				"sectionBeats": 4,
@@ -3371,12 +3371,12 @@
 			}
 		],
 		"events": [],
-		"player2": "ron",
+		"player2": "rin",
 		"splashSkin": "noteSplashes",
 		"song": "Rushed",
 		"needsVoices": true,
 		"arrowSkin": "",
-		"stage": "stage",
+		"stage": "void",
 		"validScore": true,
 		"bpm": 157,
 		"speed": 2
