@@ -1158,8 +1158,7 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
 
-		icecreamIcon  = new FlxSprite();
-		icecreamIcon.loadGraphic("shared/images/icecreamIcon.png");
+		icecreamIcon  = new FlxSprite().loadGraphic(Paths.image('icecream'));
 		icecreamIcon.y = healthBar.y - 75;
 		icecreamIcon.visible = !ClientPrefs.hideHud;
 		icecreamIcon.alpha = ClientPrefs.healthBarAlpha;
@@ -2933,9 +2932,9 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-        icecreamIcon.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (150 * icecreamIcon.scale.x - 150) / 2 - iconOffset;
-		iconP1.x = 825;
-		iconP2.x = 285;
+        icecreamIcon.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (90 * icecreamIcon.scale.x - 150) / 2 - iconOffset;
+		iconP1.x = 925;
+		iconP2.x = 175;
 
 		if (health > 2)
 			health = 2;
