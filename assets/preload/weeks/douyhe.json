@@ -1,8 +1,8 @@
 {
 	"songs": [
 		[
-			"gron",
-			"dad",
+			"Pizzaroni",
+			"douyhe",
 			[
 				146,
 				113,
@@ -19,14 +19,14 @@
 		"bf",
 		"gf"
 	],
-	"storyName": "Zipbomb moment",
-	"weekName": "Zipbomb",
+	"storyName": "CHEESE",
+	"weekName": "douyhe",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"hideStoryMode": false,
+	"hideStoryMode": true,
 	"weekBefore": "tutorial",
 	"startUnlocked": true
 }
