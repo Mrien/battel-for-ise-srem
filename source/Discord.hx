@@ -45,7 +45,7 @@ class DiscordClient
 			details: "In the Menus",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "V.S. Ron: Battle for Ice Cream"
+			largeImageText: "V.S. Ron: Battle for Ice Cream" + " Dev Build " + MainMenuState.devBuildVersion
 		});
 	}
 
@@ -82,7 +82,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'icon',
-			largeImageText: "Mod Version: " + MainMenuState.psychEngineVersion + " DEV BUILD " + MainMenuState.devBuildVersion,
+			largeImageText: "Mod Version: " + MainMenuState.psychEngineVersion,
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),
