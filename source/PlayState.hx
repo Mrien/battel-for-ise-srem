@@ -1312,7 +1312,7 @@ class PlayState extends MusicBeatState
 					tankIntro();
 				
 				case "rushed":
-					icecreamIcon  = new FlxSprite().loadGraphic(Paths.image('icecream'));
+					icecreamIcon.loadGraphic(Paths.image('icecream'));
 
 				default:
 					startCountdown();
@@ -2927,7 +2927,7 @@ class PlayState extends MusicBeatState
 
         icecreamIcon.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (90 * icecreamIcon.scale.x - 150) / 2 - iconOffset;
 		iconP1.x = 925;
-		iconP2.x = 175;
+		iconP2.x = 200;
 
 		if (health > 2)
 			health = 2;
