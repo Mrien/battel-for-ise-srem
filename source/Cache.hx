@@ -51,11 +51,6 @@ class Cache extends MusicBeatState
 		menuBG.screenCenter();
 		add(menuBG);
 
-		shitz = new FlxText(12, 630, 300, "Loading...", 12);
-		shitz.scrollFactor.set();
-		shitz.setFormat("VCR OSD Mono", 50, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
-		add(shitz);
-
 		#if cpp
 		for (i in FileSystem.readDirectory(FileSystem.absolutePath("assets/shared/images/characters")))
 		{

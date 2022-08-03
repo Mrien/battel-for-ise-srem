@@ -20,13 +20,13 @@
 		"gf"
 	],
 	"storyName": "CHEESE",
-	"weekName": "douyhe",
+	"weekName": "Douyhe",
 	"freeplayColor": [
 		146,
 		113,
 		253
 	],
-	"hideStoryMode": true,
+	"hideStoryMode": false,
 	"weekBefore": "tutorial",
 	"startUnlocked": true
 }
