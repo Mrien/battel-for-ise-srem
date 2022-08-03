@@ -1,6 +1,6 @@
 {
 	"storyName": "GIVE ME THE FUCKING ICE CREAM",
-	"difficulties": "Easy, Normal, Hard, Cool",
+	"difficulties": "",
 	"hideFreeplay": false,
 	"weekBackground": "stage",
 	"weekBefore": "",
@@ -34,16 +34,16 @@
 			"Bloodline",
 			"devilron",
 			[
-				100,
-				80,
-				0
+				193,
+				139,
+				138
 			]
 		]
 	],
 	"weekCharacters": [
-		"ron",
-		"bf",
-		"gf"
+		"",
+		"",
+		""
 	],
 	"hiddenUntilUnlocked": false,
 	"weekName": "Ice Cream"

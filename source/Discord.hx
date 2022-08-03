@@ -45,7 +45,7 @@ class DiscordClient
 			details: "In the Menus",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "V.S. Ron: Battle for Ice Cream" + " Dev Build " + MainMenuState.devBuildVersion
+			largeImageText: "V.S. Ron: BFIC Dev Build " + MainMenuState.devBuildVersion
 		});
 	}
 

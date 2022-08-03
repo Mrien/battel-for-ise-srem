@@ -2925,7 +2925,7 @@ class PlayState extends MusicBeatState
 
 		var iconOffset:Int = 26;
 
-        icecreamIcon.x = healthBar.x + (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 0, 100, 100, 0) * 0.01)) + (90 * icecreamIcon.scale.x - 150) / 2 - iconOffset;
+        icecreamIcon.x = healthBar.x - (healthBar.width * (FlxMath.remapToRange(healthBar.percent, 100, 0, 0, 100) * 0.01)) + 550 - iconOffset;
 		iconP1.x = 925;
 		iconP2.x = 200;
 
@@ -3791,7 +3791,7 @@ class PlayState extends MusicBeatState
 		if(achievementObj != null) {
 			return;
 		} else {
-			var achieve:String = checkForAchievement(['weekRon_nomiss', 'ur_bad',
+			var achieve:String = checkForAchievement(['weekRon_beat', 'ur_bad',
 				'ur_good', 'hype', 'two_keys', 'toastie']);
 
 			if(achieve != null) {
@@ -5017,7 +5017,7 @@ class PlayState extends MusicBeatState
 
 			// Rating FC
 			ratingFC = "";
-			if (sicks > 0) ratingFC = "SFC";
+			if (sicks > 0) ratingFC = "PFC";
 			if (goods > 0) ratingFC = "GFC";
 			if (bads > 0 || shits > 0) ratingFC = "FC";
 			if (songMisses > 0 && songMisses < 10) ratingFC = "SDCB";
@@ -5042,7 +5042,7 @@ class PlayState extends MusicBeatState
 				switch(achievementName)
 				{
 					case 'weekRon_beat':
-						if(isStoryMode && campaignMisses + CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						if(isStoryMode && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
 							switch(weekName) //I know this is a lot of duplicated code, but it's easier readable and you can add weeks with different names than the achievement tag
