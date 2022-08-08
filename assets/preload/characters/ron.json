@@ -1,70 +1,70 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				-210
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "IDLE"
+			"fps": 24,
+			"name": "IDLE",
+			"indices": []
 		},
 		{
-			"offsets": [
-				0,
-				-270
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				39,
+				-329
+			],
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "down"
+			"fps": 24,
+			"name": "down",
+			"indices": []
 		},
 		{
-			"offsets": [
-				124,
-				-80
-			],
 			"loop": false,
-			"fps": 24,
+			"offsets": [
+				117,
+				-30
+			],
 			"anim": "singUP",
-			"indices": [],
-			"name": "up"
-		},
-		{
-			"loop": false,
-			"offsets": [
-				80,
-				-140
-			],
-			"anim": "ronck",
 			"fps": 24,
-			"name": "the ronck",
+			"name": "up",
 			"indices": []
 		},
 		{
 			"offsets": [
-				61,
-				-210
+				100,
+				-140
 			],
-			"indices": [],
-			"fps": 24,
-			"anim": "singLEFT",
 			"loop": false,
-			"name": "right"
+			"fps": 24,
+			"anim": "ronck",
+			"indices": [],
+			"name": "the ronck"
 		},
 		{
+			"loop": false,
+			"offsets": [
+				36,
+				-219
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
+		},
+		{
+			"loop": false,
 			"offsets": [
 				-10,
 				-220
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "left"
+			"fps": 24,
+			"name": "left",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

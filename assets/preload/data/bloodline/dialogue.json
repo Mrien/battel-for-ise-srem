@@ -4,7 +4,7 @@
 			"expression": "talk",
 			"text": "awesome",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob"
 		},
@@ -12,7 +12,7 @@
 			"expression": "talk",
 			"text": "silence",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob"
 		},
@@ -20,7 +20,7 @@
 			"expression": "excited",
 			"text": "ill modify some of the lines",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf"
 		},
@@ -28,7 +28,7 @@
 			"expression": "angy",
 			"text": "no",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -36,7 +36,7 @@
 			"expression": "talk",
 			"text": "to make it better lol",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf"
 		},
@@ -44,7 +44,7 @@
 			"expression": "talk",
 			"text": "i do dialog",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -52,7 +52,7 @@
 			"expression": "smugass",
 			"text": "troll",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -60,7 +60,7 @@
 			"expression": "talk",
 			"text": "guys",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob"
 		},
@@ -68,7 +68,7 @@
 			"expression": "pissed",
 			"text": "no",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf"
 		},
@@ -76,7 +76,7 @@
 			"expression": "angy",
 			"text": "i write it",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -84,7 +84,7 @@
 			"expression": "talk",
 			"text": "can i be ron for this one",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob"
 		},
@@ -92,7 +92,7 @@
 			"expression": "talk",
 			"text": "yes",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -100,7 +100,7 @@
 			"expression": "talk",
 			"text": "ok",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -108,7 +108,7 @@
 			"expression": "talk",
 			"text": "i have goofy idea",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob"
 		},
@@ -116,7 +116,7 @@
 			"expression": "talk",
 			"text": "but",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -124,7 +124,7 @@
 			"expression": "smugass",
 			"text": "ok what ur idea",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -132,7 +132,7 @@
 			"expression": "talk",
 			"text": "ok",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -140,7 +140,7 @@
 			"expression": "talk",
 			"text": "dialog ends",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -148,7 +148,7 @@
 			"expression": "talk",
 			"text": "because",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -156,7 +156,7 @@
 			"expression": "smugass",
 			"text": "thats gonna be in the mod",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -164,7 +164,7 @@
 			"expression": "talk",
 			"text": "what",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf"
 		},
@@ -172,7 +172,7 @@
 			"expression": "talk",
 			"text": "wtf we were making a dialogue",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob"
 		},
@@ -180,7 +180,7 @@
 			"expression": "talk",
 			"text": "ok lemme get to writing",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -188,7 +188,7 @@
 			"expression": "excited",
 			"text": "this is the worst dialogue ever",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf"
 		},
@@ -196,7 +196,7 @@
 			"expression": "talk",
 			"text": "MORRY IS TROLLING",
 			"boxState": "angry",
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.02,
 			"portrait": "bob"
 		}

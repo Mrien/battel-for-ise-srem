@@ -1,6 +1,6 @@
 function onCreate()
 	-- background shit
-	makeLuaSprite('roadandbuildings', 'road', -620, -220);
+	makeLuaSprite('roadandbuildings', 'crackedroad', -620, -220);
 	setScrollFactor('roadandbuildings', 1, 1);
 
 	addLuaSprite('roadandbuildings', false);

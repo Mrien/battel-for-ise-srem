@@ -4,7 +4,7 @@
 			"expression": "bored",
 			"text": "wtf",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -12,7 +12,7 @@
 			"expression": "angy",
 			"text": "i won",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron"
 		},
@@ -20,12 +20,12 @@
 			"expression": "excited",
 			"text": "no i won",
 			"boxState": "normal",
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf"
 		},
 		{
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob",
 			"boxState": "normal",
@@ -33,7 +33,7 @@
 			"text": "man im bob im gonna run this truck over you bitches"
 		},
 		{
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -41,7 +41,7 @@
 			"text": "cry about it"
 		},
 		{
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -49,7 +49,7 @@
 			"text": "we all know i won"
 		},
 		{
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron",
 			"boxState": "normal",
@@ -57,7 +57,7 @@
 			"text": "wtf why is dream there"
 		},
 		{
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron",
 			"boxState": "normal",
@@ -65,7 +65,7 @@
 			"text": "wait"
 		},
 		{
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -73,7 +73,7 @@
 			"text": "cry"
 		},
 		{
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron",
 			"boxState": "normal",
@@ -81,7 +81,7 @@
 			"text": "die"
 		},
 		{
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron",
 			"boxState": "normal",
@@ -89,7 +89,7 @@
 			"text": "lmao"
 		},
 		{
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -97,7 +97,7 @@
 			"text": "bro wtf"
 		},
 		{
-			"sound": "",
+			"sound": "bobtext",
 			"speed": 0.05,
 			"portrait": "bob",
 			"boxState": "normal",
@@ -105,7 +105,7 @@
 			"text": "dialogue ends here epically"
 		},
 		{
-			"sound": "",
+			"sound": "rontext",
 			"speed": 0.05,
 			"portrait": "ron",
 			"boxState": "normal",
@@ -113,7 +113,7 @@
 			"text": "death threats"
 		},
 		{
-			"sound": "",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",

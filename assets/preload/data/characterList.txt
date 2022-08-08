@@ -3,5 +3,7 @@ bb-sleepdeprived
 bf
 gf
 ron
+ron-mad
+devilron
 rin
 littleman
