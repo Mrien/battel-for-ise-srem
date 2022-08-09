@@ -18,7 +18,7 @@ import flixel.system.FlxSound;
 using StringTools;
 
 class FreeplayCategory3State extends MusicBeatState{
-	var songs:Array<SongMetadataCool> = [];
+	var songs:Array<SongMetadataCool2> = [];
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -45,7 +45,7 @@ class FreeplayCategory3State extends MusicBeatState{
 
 	override function create()
 	{
-		addWeek(['Rushed'], 1, ['rin'], FlxColor.RED);
+		addSong('Rushed', 2, 'rin', FlxColor.fromRGB(255, 255, 255));
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 		
@@ -196,7 +196,7 @@ class FreeplayCategory3State extends MusicBeatState{
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
 	{
-		songs.push(new SongMetadataCool(songName, weekNum, songCharacter, color));
+		songs.push(new SongMetadataCool2(songName, weekNum, songCharacter, color));
 	}
 
 	function weekIsLocked(name:String):Bool {
@@ -514,7 +514,7 @@ class FreeplayCategory3State extends MusicBeatState{
 	}
 }
 
-class SongMetadataCool
+class SongMetadataCool2
 {
 	public var songName:String = "";
 	public var week:Int = 0;

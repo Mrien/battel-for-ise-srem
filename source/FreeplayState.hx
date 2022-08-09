@@ -52,8 +52,11 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		//Paths.clearStoredMemory();
-		//Paths.clearUnusedMemory();
+		addSong('Iced', 0, 'ron', FlxColor.fromRGB(255, 216, 0));
+		addSong('Murky', 0, 'ronmad', FlxColor.fromRGB(100, 80, 0));
+		addSong('Bloodline', 0, 'devilron', FlxColor.fromRGB(193, 139, 138));
+		Paths.clearStoredMemory();
+		Paths.clearUnusedMemory();
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -75,17 +78,6 @@ class FreeplayState extends MusicBeatState
 			{
 				leSongs.push(leWeek.songs[j][0]);
 				leChars.push(leWeek.songs[j][1]);
-			}
-
-			WeekData.setDirectoryFromWeek(leWeek);
-			for (song in leWeek.songs)
-			{
-				var colors:Array<Int> = song[2];
-				if(colors == null || colors.length < 3)
-				{
-					colors = [146, 113, 253];
-				}
-				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
 			}
 		}
 		WeekData.loadTheFirstEnabledMod();
@@ -324,7 +316,7 @@ class FreeplayState extends MusicBeatState
 				colorTween.cancel();
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new MainMenuState());
+			MusicBeatState.switchState(new FreeplaySelectState());
 		}
 
 		if(ctrl)

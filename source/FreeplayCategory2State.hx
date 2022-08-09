@@ -45,7 +45,7 @@ class FreeplayCategory2State extends MusicBeatState{
 
 	override function create()
 	{
-		addWeek(['Pizzaroni'], 2, ['douyhe'], FlxColor.fromRGB(255, 255, 255));
+		addSong('Pizzaroni', 1, 'douyhe', FlxColor.fromRGB(55, 90, 207));
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 		

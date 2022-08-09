@@ -3889,6 +3889,32 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
+			if (FreeplaySelectState.freeplay2)
+			{
+				trace('WENT BACK TO FREEPLAY??');
+				WeekData.loadTheFirstEnabledMod();
+				cancelMusicFadeTween();
+				if(FlxTransitionableState.skipNextTransIn) {
+					CustomFadeTransition.nextCamera = null;
+				}
+				MusicBeatState.switchState(new FreeplayCategory2State());
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				changedDifficulty = false;
+				FreeplaySelectState.freeplay2 = false;
+			}
+			if (FreeplaySelectState.freeplay3)
+			{
+				trace('WENT BACK TO FREEPLAY??');
+				WeekData.loadTheFirstEnabledMod();
+				cancelMusicFadeTween();
+				if(FlxTransitionableState.skipNextTransIn) {
+					CustomFadeTransition.nextCamera = null;
+				}
+				MusicBeatState.switchState(new FreeplayCategory3State());
+				FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				changedDifficulty = false;
+				FreeplaySelectState.freeplay3 = false;
+			}
 			else
 			{
 				trace('WENT BACK TO FREEPLAY??');
