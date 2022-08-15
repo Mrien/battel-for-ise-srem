@@ -7,7 +7,7 @@ import flixel.FlxG;
 class FreeplaySelectState extends MusicBeatState{
 	public static var freeplay2:Bool;
 	public static var freeplay3:Bool;
-    var freeplayCats:Array<String> = ['Main', 'Douyhe', 'Extras'];
+    var freeplayCats:Array<String> = ['Main', 'Douyhe', 'Extras', 'Developer Stuff'];
 	var grpCats:FlxTypedGroup<Alphabet>;
 	var curSelected:Int = 0;
 	var BG:FlxSprite;
@@ -50,6 +50,8 @@ class FreeplaySelectState extends MusicBeatState{
 				case 2:
 				freeplay3 = true;
 				MusicBeatState.switchState(new FreeplayCategory3State());
+				case 3:
+				MusicBeatState.switchState(new FreeplayDevState());
             }
         }
         super.update(elapsed);

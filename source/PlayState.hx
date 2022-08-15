@@ -422,6 +422,10 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
+				case 'bloodline':
+					curStage = 'cracked';
+				case 'rushed':
+					curStage = 'void';
 				default:
 					curStage = 'stage';
 			}
@@ -1311,8 +1315,11 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 				
+				case 'bloodline':
+					trace("bleed");
+
 				case 'rushed':
-					icecreamIcon.loadGraphic(Paths.image('soup'));
+					trace("SOUP");
 
 				default:
 					startCountdown();
@@ -3791,7 +3798,7 @@ class PlayState extends MusicBeatState
 		if(achievementObj != null) {
 			return;
 		} else {
-			var achieve:String = checkForAchievement(['weekRon_beat', 'ur_bad',
+			var achieve:String = checkForAchievement(['weekRon_nomiss', 'ur_bad',
 				'ur_good', 'hype', 'two_keys', 'toastie']);
 
 			if(achieve != null) {
@@ -3889,7 +3896,7 @@ class PlayState extends MusicBeatState
 					}
 				}
 			}
-			if (FreeplaySelectState.freeplay2)
+			else if (FreeplaySelectState.freeplay2)
 			{
 				trace('WENT BACK TO FREEPLAY??');
 				WeekData.loadTheFirstEnabledMod();
@@ -3902,7 +3909,7 @@ class PlayState extends MusicBeatState
 				changedDifficulty = false;
 				FreeplaySelectState.freeplay2 = false;
 			}
-			if (FreeplaySelectState.freeplay3)
+			else if (FreeplaySelectState.freeplay3)
 			{
 				trace('WENT BACK TO FREEPLAY??');
 				WeekData.loadTheFirstEnabledMod();
@@ -5067,14 +5074,14 @@ class PlayState extends MusicBeatState
 				var unlock:Bool = false;
 				switch(achievementName)
 				{
-					case 'weekRon_beat':
-						if(isStoryMode && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+					case 'weekRon_nomiss':
+						if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD' && storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
 						{
 							var weekName:String = WeekData.getWeekFileName();
 							switch(weekName) //I know this is a lot of duplicated code, but it's easier readable and you can add weeks with different names than the achievement tag
 							{
 								case 'weekRon':
-									if(achievementName == 'weekRon_beat') unlock = true;
+									if(achievementName == 'weekRon_nomiss') unlock = true;
 							}
 						}
 					case 'ur_bad':

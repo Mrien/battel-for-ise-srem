@@ -1,6 +1,6 @@
 function onCreate()
 	-- background shit
-	makeLuaSprite('void', 'void', -600, -300);
+	makeLuaSprite('void', 'void', -810, -400);
 	setScrollFactor('void', 0.9, 0.9);
 
 	addLuaSprite('void', false);

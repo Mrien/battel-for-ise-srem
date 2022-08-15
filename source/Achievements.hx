@@ -12,7 +12,7 @@ using StringTools;
 class Achievements {
 	public static var achievementsStuff:Array<Dynamic> = [ //Name, Description, Achievement save tag, Hidden achievement
 		["Freaky on a Friday Night",	"Play on a Friday... Night.",						'friday_night_play',	 true],
-		["Ice Cream Enthusiast",		"Beat Week 1 on Hard. (in a cool way)",             'weekRon_beat',	        false],
+		["Ice Cream Enthusiast",		"Beat Week 1 on Hard with 0 misses. (in a cool way)", 'weekRon_nomiss',	    false],
 		["What a Funkin' Disaster!",	"Complete a Song with a rating lower than 20%.",	'ur_bad',				false],
 		["Perfectionist",				"Complete a Song with a rating of 100%.",			'ur_good',				false],
 		["Oversinging Much...?",		"Hold down a note for 10 seconds.",					'oversinging',			false],

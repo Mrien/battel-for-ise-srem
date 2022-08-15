@@ -1,0 +1,14 @@
+function opponentNoteHit()
+    health = getProperty('health')
+    if dadName == 'ron' then
+        if getProperty('health') > 0.005 then
+            setProperty('health', health- 0.005);
+        end
+    elseif dadName == 'ron-mad' then
+        if getProperty('health') > 0.005 then
+            setProperty('health', health- 0.005);
+        end
+    elseif dadName == 'devilron' then
+            setProperty('health', health- 0.02);
+        end
+    end

@@ -1,4 +1,4 @@
-function onCreatePost()
+function onCreatePost() --script made by impostor, credit me now or i will do an unfunny
     if difficulty == 3 then
         makeLuaText("message2", "Cool guy mode", 500, 30, 90)
         setTextAlignment("message2", "left")

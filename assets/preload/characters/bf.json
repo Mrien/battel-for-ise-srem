@@ -1,81 +1,81 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-5,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "idle",
-			"loop": false,
-			"name": "BF idle dance instance 1"
+			"fps": 24,
+			"name": "BF idle dance instance 1",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				5,
 				-6
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singLEFT",
-			"loop": false,
-			"name": "BF NOTE LEFT instance 1"
+			"fps": 24,
+			"name": "BF NOTE LEFT instance 1",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-20,
 				-51
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singDOWN",
-			"loop": false,
-			"name": "BF NOTE DOWN instance 1"
+			"fps": 24,
+			"name": "BF NOTE DOWN instance 1",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-46,
 				27
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singUP",
-			"loop": false,
-			"name": "BF NOTE UP instance 1"
+			"fps": 24,
+			"name": "BF NOTE UP instance 1",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
-				0,
+				-43,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "singRIGHT",
-			"loop": false,
-			"name": "BF NOTE RIGHT instance 1"
+			"fps": 24,
+			"name": "BF NOTE RIGHT instance 1",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-3,
 				5
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "hey",
-			"loop": false,
-			"name": "BF HEY!! instance 1"
+			"fps": 24,
+			"name": "BF HEY!! instance 1",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-4,
 				0
 			],
-			"indices": [],
-			"fps": 24,
 			"anim": "scared",
-			"loop": false,
-			"name": "BF idle shaking instance 1"
+			"fps": 24,
+			"name": "BF idle shaking instance 1",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,

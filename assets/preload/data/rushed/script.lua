@@ -2,7 +2,7 @@
 IntroTextSize = 25	--Size of the text for the Now Playing thing.
 IntroSubTextSize = 30 --size of the text for the Song Name.
 IntroSubSubTextSize = 15 --size of the text for the Composer of the song.
-IntroTagColor = 'ffd800'	--Color of the tag at the end of the box.
+IntroTagColor = 'ffffff'	--Color of the tag at the end of the box.
 IntroTagWidth = 15	--Width of the box's tag thingy.
 --easy script configs
 
@@ -22,7 +22,7 @@ function onCreate()
 	
 	--the text for the "Now Playing" bit
 	makeLuaText('JukeBoxText', 'Now Playing:', 300, -305-IntroTagWidth, 30)
-	setTextColor('JukeBoxText', 'ffd800')
+	setTextColor('JukeBoxText', 'ffffff')
 	setTextAlignment('JukeBoxText', 'left')
 	setObjectCamera('JukeBoxText', 'other')
 	setTextSize('JukeBoxText', IntroTextSize)

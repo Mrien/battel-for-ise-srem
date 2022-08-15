@@ -24,9 +24,9 @@ import sys.FileSystem;
 
 using StringTools;
 
-class FreeplayState extends MusicBeatState
+class FreeplayDevState extends MusicBeatState
 {
-	var songs:Array<SongMetadata> = [];
+	var songs:Array<SongMetadataDev> = [];
 
 	var selector:FlxText;
 	private static var curSelected:Int = 0;
@@ -52,11 +52,8 @@ class FreeplayState extends MusicBeatState
 
 	override function create()
 	{
-		addSong('Iced', 0, 'ron', FlxColor.fromRGB(255, 216, 0));
-		addSong('Murky', 0, 'ronmad', FlxColor.fromRGB(100, 80, 0));
-		addSong('Bloodline', 0, 'devilron', FlxColor.fromRGB(193, 139, 138));
-		Paths.clearStoredMemory();
-		Paths.clearUnusedMemory();
+		//Paths.clearStoredMemory();
+		//Paths.clearUnusedMemory();
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
@@ -78,6 +75,17 @@ class FreeplayState extends MusicBeatState
 			{
 				leSongs.push(leWeek.songs[j][0]);
 				leChars.push(leWeek.songs[j][1]);
+			}
+
+			WeekData.setDirectoryFromWeek(leWeek);
+			for (song in leWeek.songs)
+			{
+				var colors:Array<Int> = song[2];
+				if(colors == null || colors.length < 3)
+				{
+					colors = [146, 113, 253];
+				}
+				addSong(song[0], i, song[1], FlxColor.fromRGB(colors[0], colors[1], colors[2]));
 			}
 		}
 		WeekData.loadTheFirstEnabledMod();
@@ -206,7 +214,7 @@ class FreeplayState extends MusicBeatState
 
 	public function addSong(songName:String, weekNum:Int, songCharacter:String, color:Int)
 	{
-		songs.push(new SongMetadata(songName, weekNum, songCharacter, color));
+		songs.push(new SongMetadataDev(songName, weekNum, songCharacter, color));
 	}
 
 	function weekIsLocked(name:String):Bool {
@@ -316,7 +324,7 @@ class FreeplayState extends MusicBeatState
 				colorTween.cancel();
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
-			MusicBeatState.switchState(new FreeplaySelectState());
+			MusicBeatState.switchState(new MainMenuState());
 		}
 
 		if(ctrl)
@@ -378,7 +386,7 @@ class FreeplayState extends MusicBeatState
 			if (FlxG.keys.pressed.SHIFT){
 				LoadingState.loadAndSwitchState(new ChartingState());
 			}else{
-				LoadingState.loadAndSwitchState(new Cache());
+				LoadingState.loadAndSwitchState(new PlayState());
 			}
 
 			FlxG.sound.music.volume = 0;
@@ -532,7 +540,7 @@ class FreeplayState extends MusicBeatState
 	}
 }
 
-class SongMetadata
+class SongMetadataDev
 {
 	public var songName:String = "";
 	public var week:Int = 0;

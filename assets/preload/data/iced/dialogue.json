@@ -49,7 +49,7 @@
 			"text": "rap"
 		},
 		{
-			"sound": "rontext",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -57,7 +57,7 @@
 			"text": "stop"
 		},
 		{
-			"sound": "rontext",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -65,7 +65,7 @@
 			"text": "ok"
 		},
 		{
-			"sound": "rontext",
+			"sound": "bftext",
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
@@ -93,7 +93,7 @@
 			"speed": 0.05,
 			"portrait": "bf",
 			"boxState": "normal",
-			"expression": "shocked",
+			"expression": "talk",
 			"text": ":(\r\n"
 		}
 	]
