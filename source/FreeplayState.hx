@@ -54,7 +54,7 @@ class FreeplayState extends MusicBeatState
 	{
 		addSong('Iced', 0, 'ron', FlxColor.fromRGB(255, 216, 0));
 		addSong('Murky', 0, 'ronmad', FlxColor.fromRGB(100, 80, 0));
-		addSong('Bloodline', 0, 'devilron', FlxColor.fromRGB(193, 139, 138));
+		addSong('Bloodline', 0, 'devilron', FlxColor.fromRGB(105, 1, 0));
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 		

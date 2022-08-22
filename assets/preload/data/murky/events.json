@@ -2,12 +2,42 @@
 	"song": {
 		"events": [
 			[
+				74893.6170212767,
+				[
+					[
+						"Change Character",
+						"dad",
+						"littleman"
+					]
+				]
+			],
+			[
 				92664.8936170214,
 				[
 					[
 						"Change Scroll Speed",
 						"1.11",
 						""
+					]
+				]
+			],
+			[
+				92739.8936170214,
+				[
+					[
+						"Change Character",
+						"dad",
+						"devilron"
+					]
+				]
+			],
+			[
+				113814.893617021,
+				[
+					[
+						"Change Character",
+						"dad",
+						"ron-mad"
 					]
 				]
 			],

@@ -4846,21 +4846,6 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		}
 
-		if (curSong == 'murky') 
-			{
-				switch (curStep)
-				{
-					case 704:
-						remove(dad);
-						dad = new Character(100, 100, 'littleman');
-						add(dad);
-					case 875:
-						remove(dad);
-						dad = new Character(100, 100, 'ron-mad');
-						add(dad);
-				 }
-			}
-
 		if(curStep == lastStepHit) {
 			return;
 		}
