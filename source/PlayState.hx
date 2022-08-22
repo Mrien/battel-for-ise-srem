@@ -422,6 +422,10 @@ class PlayState extends MusicBeatState
 					curStage = 'schoolEvil';
 				case 'ugh' | 'guns' | 'stress':
 					curStage = 'tank';
+				case 'iced' | 'pizzaroni':
+					curStage = 'road';
+				case 'murky':
+					curStage = 'sunset';
 				case 'bloodline':
 					curStage = 'cracked';
 				case 'rushed':
@@ -976,6 +980,14 @@ class PlayState extends MusicBeatState
 			case 'schoolEvil':
 				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069); //nice
 				addBehindDad(evilTrail);
+			
+			case 'cracked':
+				// trailArea.scrollFactor.set();
+				var evilTrail = new FlxTrail(dad, null, 4, 24, 0.3, 0.069);
+				// evilTrail.changeValuesEnabled(false, false, false, false);
+				// evilTrail.changeGraphic()
+				add(evilTrail);
+				// evilTrail.scrollFactor.set(1.1, 1.1);
 		}
 
 		var file:String = Paths.json(songName + '/dialogue'); //Checks for json/Psych Engine dialogue
@@ -1004,7 +1016,7 @@ class PlayState extends MusicBeatState
 
 		var showTime:Bool = (ClientPrefs.timeBarType != 'Disabled');
 		timeTxt = new FlxText(STRUM_X + (FlxG.width / 2) - 248, 19, 400, "", 32);
-		timeTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		timeTxt.setFormat(Paths.font("vcr-osd.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		timeTxt.scrollFactor.set();
 		timeTxt.alpha = 0;
 		timeTxt.borderSize = 2;
@@ -1315,20 +1327,32 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 				
-				case 'bloodline':
-					trace("bleed");
-
-				case 'rushed':
-					trace("SOUP");
-
 				default:
 					startCountdown();
 			}
 			seenCutscene = true;
 		}
 		else
-		{
-			startCountdown();
+		{   
+			switch (daSong)
+			{
+				case 'iced':
+					startDialogue(dialogueJson);
+				
+				case 'murky':
+					startDialogue(dialogueJson);
+
+				case 'bloodline':
+					startDialogue(dialogueJson);
+					trace("bleed");
+
+				case 'rushed':
+					icecreamIcon.loadGraphic(Paths.image('soup'));
+					trace("SOUP")
+
+				default:
+					startCountdown();
+			}
 		}
 		RecalculateRating();
 
@@ -4823,6 +4847,21 @@ class PlayState extends MusicBeatState
 		{
 			resyncVocals();
 		}
+
+		if (curSong == 'murky') 
+			{
+				switch (curStep)
+				{
+					case 704:
+						remove(dad);
+						dad = new Character(100, 100, 'little-man');
+						add(dad);
+					case 875:
+						remove(dad);
+						dad = new Character(100, 100, 'ron-mad');
+						add(dad);
+				 }
+			}
 
 		if(curStep == lastStepHit) {
 			return;

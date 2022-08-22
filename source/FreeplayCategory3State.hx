@@ -51,11 +51,12 @@ class FreeplayCategory3State extends MusicBeatState{
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
+		FreeplaySelectState.freeplay3 = true;
 		WeekData.reloadWeekFiles(false);
 
 		#if desktop
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("Freeplay: Extras", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length) {
@@ -299,6 +300,7 @@ class FreeplayCategory3State extends MusicBeatState{
 				colorTween.cancel();
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
+			FreeplaySelectState.freeplay3 = false;
 			MusicBeatState.switchState(new FreeplaySelectState());
 		}
 

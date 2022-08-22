@@ -5,7 +5,7 @@
 	],
 	"dialogue_pos": "right",
 	"scale": 1.25,
-	"image": "BF_Dialogue",
+	"image": "BB_Dialogue",
 	"animations": [
 		{
 			"idle_offsets": [

@@ -42,7 +42,7 @@ class DiscordClient
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "In the Menus",
+			details: "Title Screen",
 			state: null,
 			largeImageKey: 'icon',
 			largeImageText: "V.S. Ron: BFIC Dev Build " + MainMenuState.devBuildVersion

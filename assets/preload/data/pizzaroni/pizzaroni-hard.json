@@ -2398,7 +2398,12 @@
 					[
 						76304.3478260869,
 						0,
-						0
+						108.695652173913
+					],
+					[
+						76250,
+						1,
+						163.04347826087
 					]
 				],
 				"typeOfSection": 0,
@@ -3032,8 +3037,13 @@
 						0
 					],
 					[
-						94130.4347826087,
+						94021.7391304348,
 						1,
+						0
+					],
+					[
+						94130.4347826087,
+						2,
 						543.478260869565
 					]
 				],
@@ -3393,6 +3403,26 @@
 				"mustHitSection": true,
 				"changeBPM": false,
 				"bpm": 138
+			},
+			{
+				"sectionBeats": 4,
+				"sectionNotes": [],
+				"typeOfSection": 0,
+				"gfSection": false,
+				"altAnim": false,
+				"mustHitSection": true,
+				"changeBPM": false,
+				"bpm": 138
+			},
+			{
+				"typeOfSection": 0,
+				"sectionNotes": [],
+				"sectionBeats": 4,
+				"altAnim": false,
+				"gfSection": false,
+				"bpm": 138,
+				"changeBPM": false,
+				"mustHitSection": true
 			},
 			{
 				"sectionBeats": 4,

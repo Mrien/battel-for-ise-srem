@@ -1,5 +1,8 @@
 package;
 
+#if desktop
+import Discord.DiscordClient;
+#end
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.FlxSprite;
 import flixel.FlxG;
@@ -7,15 +10,20 @@ import flixel.FlxG;
 class FreeplaySelectState extends MusicBeatState{
 	public static var freeplay2:Bool;
 	public static var freeplay3:Bool;
-    var freeplayCats:Array<String> = ['Main', 'Douyhe', 'Extras', 'Developer Stuff'];
+    var freeplayCats:Array<String> = ['Main', 'Douyhe', 'Extras'];
 	var grpCats:FlxTypedGroup<Alphabet>;
 	var curSelected:Int = 0;
-	var BG:FlxSprite;
+	var bg:FlxSprite;
     override function create(){
-        BG = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
-		BG.updateHitbox();
-		BG.screenCenter();
-		add(BG);
+		#if desktop
+		// Updating Discord Rich Presence
+		DiscordClient.changePresence("Selecting a Freeplay Category", null);
+		#end
+
+        bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+		bg.updateHitbox();
+		bg.screenCenter();
+		add(bg);
         grpCats = new FlxTypedGroup<Alphabet>();
 		add(grpCats);
         for (i in 0...freeplayCats.length)
@@ -45,13 +53,9 @@ class FreeplaySelectState extends MusicBeatState{
                 case 0:
                 MusicBeatState.switchState(new FreeplayState());
                 case 1:
-				freeplay2 = true;
                 MusicBeatState.switchState(new FreeplayCategory2State());
 				case 2:
-				freeplay3 = true;
 				MusicBeatState.switchState(new FreeplayCategory3State());
-				case 3:
-				MusicBeatState.switchState(new FreeplayDevState());
             }
         }
         super.update(elapsed);
