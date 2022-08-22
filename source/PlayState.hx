@@ -1324,7 +1324,17 @@ class PlayState extends MusicBeatState
 
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
-				
+
+				case 'iced':
+					startDialogue(dialogueJson);
+					
+				case 'murky':
+					startDialogue(dialogueJson);
+	
+				case 'bloodline':
+					startDialogue(dialogueJson);
+					trace("bleed");
+	
 				default:
 					startCountdown();
 			}
@@ -1568,6 +1578,7 @@ class PlayState extends MusicBeatState
 
 		if(dialogueFile.dialogue.length > 0) {
 			inCutscene = true;
+			FlxG.sound.playMusic(Paths.music('breakfast'));
 			precacheList.set('dialogue', 'sound');
 			precacheList.set('dialogueClose', 'sound');
 			psychDialogue = new DialogueBoxPsych(dialogueFile, song);
