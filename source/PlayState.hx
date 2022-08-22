@@ -813,8 +813,6 @@ class PlayState extends MusicBeatState
 		{
 			case 'stress':
 				GameOverSubstate.characterName = 'bf-holding-gf-dead';
-			case 'rushed':
-				GameOverSubstate.characterName = 'bf-dead';
 		}
 
 		if(isPixelStage) {
@@ -1348,7 +1346,7 @@ class PlayState extends MusicBeatState
 
 				case 'rushed':
 					icecreamIcon.loadGraphic(Paths.image('soup'));
-					trace("SOUP")
+					startCountdown();
 
 				default:
 					startCountdown();
@@ -4854,7 +4852,7 @@ class PlayState extends MusicBeatState
 				{
 					case 704:
 						remove(dad);
-						dad = new Character(100, 100, 'little-man');
+						dad = new Character(100, 100, 'littleman');
 						add(dad);
 					case 875:
 						remove(dad);

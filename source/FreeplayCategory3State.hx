@@ -362,7 +362,7 @@ class FreeplayCategory3State extends MusicBeatState{
 			if (FlxG.keys.pressed.SHIFT){
 				LoadingState.loadAndSwitchState(new editors.ChartingState());
 			}else{
-				LoadingState.loadAndSwitchState(new PlayState());
+				LoadingState.loadAndSwitchState(new Cache());
 			}
 
 			FlxG.sound.music.volume = 0;
