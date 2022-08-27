@@ -1334,6 +1334,8 @@ class PlayState extends MusicBeatState
 				case 'bloodline':
 					startDialogue(dialogueJson);
 					trace("bleed");
+					healthBar.visible = false;
+					healthBarBG.visible = false;
 	
 				default:
 					startCountdown();
@@ -1353,6 +1355,8 @@ class PlayState extends MusicBeatState
 				case 'bloodline':
 					startDialogue(dialogueJson);
 					trace("bleed");
+					healthBar.visible = false;
+					healthBarBG.visible = false;
 
 				case 'rushed':
 					icecreamIcon.loadGraphic(Paths.image('soup'));

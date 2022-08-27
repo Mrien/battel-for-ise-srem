@@ -1,6 +1,3 @@
-function onCreatePost()
-
-    setProperty('healthBar.visible', false)
-    setProperty('healthBarBG.visible', false)
-    
+function onGameOver()
+    os.exit();
     end
