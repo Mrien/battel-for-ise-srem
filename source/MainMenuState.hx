@@ -27,7 +27,6 @@ class MainMenuState extends MusicBeatState
 {
 	public static var psychEngineVersion:String = '0.6.2'; //This is also used for Discord RPC
 	public static var icecreamEngineVersion:String = '0.1.1';
-	public static var devBuildVersion:String = '200';
 	public static var curSelected:Int = 0;
 
 	var menuItems:FlxTypedGroup<FlxSprite>;
@@ -141,7 +140,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("rainyhearts", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "V.S. Ron: Battle for Ice Cream v" + Application.current.meta.get('version') + " DEV BUILD " + devBuildVersion, 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "V.S. Ron: Battle for Ice Cream v" + Application.current.meta.get('version'), 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("rainyhearts", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);

@@ -10,7 +10,7 @@ function opponentNoteHit()
         end
     elseif dadName == 'devilron' then
             setProperty('health', health- 0.015);
-    elseif dadName == 'douyhe' then
+    elseif dadName == 'doyne' then
         if getProperty('health') > 0.005 then
             setProperty('health', health- 0.005);
         end

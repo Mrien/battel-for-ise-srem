@@ -75,16 +75,16 @@ class PlayState extends MusicBeatState
 	public static var STRUM_X_MIDDLESCROLL = -278;
 
 	public static var ratingStuff:Array<Dynamic> = [
-		['F-', 0.2], //From 0% to 19%
-		['GARBAGE', 0.4], //From 20% to 39%
-		['Do Better', 0.5], //From 40% to 49%
-		['Bruh', 0.6], //From 50% to 59%
-		['Eh', 0.69], //From 60% to 68%
-		['hehehaw', 0.7], //69%
-		['Good', 0.8], //From 70% to 79%
-		['Great!', 0.9], //From 80% to 89%
-		['Sick!', 1], //From 90% to 99%
-		['Cool!!', 1] //The value on this one isn't used actually, since Perfect is always "1"
+		['F', 0.2], //From 0% to 19%
+		['D', 0.4], //From 20% to 39%
+		['C', 0.5], //From 40% to 49%
+		['B', 0.6], //From 50% to 59%
+		['A', 0.69], //From 60% to 68%
+		['nice', 0.7], //69%
+		['S', 0.8], //From 70% to 79%
+		['S+', 0.9], //From 80% to 89%
+		['S++', 1], //From 90% to 99%
+		['Cool!', 1] //The value on this one isn't used actually, since Perfect is always "1"
 	];
 	public var modchartTweens:Map<String, FlxTween> = new Map<String, FlxTween>();
 	public var modchartSprites:Map<String, ModchartSprite> = new Map<String, ModchartSprite>();
@@ -2221,8 +2221,9 @@ class PlayState extends MusicBeatState
 	{
 		scoreTxt.text = 'Score: ' + songScore
 		+ ' | Misses: ' + songMisses
-		+ ' | Accuracy: ' + ratingName
-		+ (ratingName != '?' ? ' (${Highscore.floorDecimal(ratingPercent * 100, 2)}%) - $ratingFC' : '');
+		+ ' | Accuracy: ' + '${Highscore.floorDecimal(ratingPercent * 100, 2)}%'
+		+ ' | Rank: ' + ratingName
+		+ (ratingName != '?' ? ' | $ratingFC' : '');
 
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{

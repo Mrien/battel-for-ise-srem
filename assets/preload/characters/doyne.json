@@ -3,8 +3,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-65,
-				-210
+				0,
+				0
 			],
 			"anim": "idle",
 			"fps": 24,
@@ -14,8 +14,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				1,
-				-168
+				0,
+				0
 			],
 			"anim": "singLEFT",
 			"fps": 24,
@@ -25,19 +25,8 @@
 		{
 			"loop": false,
 			"offsets": [
-				-57,
-				-188
-			],
-			"anim": "singRIGHT",
-			"fps": 24,
-			"name": "right",
-			"indices": []
-		},
-		{
-			"loop": false,
-			"offsets": [
-				18,
-				-269
+				0,
+				0
 			],
 			"anim": "singDOWN",
 			"fps": 24,
@@ -47,32 +36,43 @@
 		{
 			"loop": false,
 			"offsets": [
-				-56,
-				-136
+				0,
+				0
 			],
 			"anim": "singUP",
 			"fps": 24,
 			"name": "up",
 			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "right",
+			"indices": []
 		}
 	],
-	"no_antialiasing": false,
-	"image": "characters/douyhe",
+	"no_antialiasing": true,
+	"image": "characters/doyne",
 	"position": [
-		0,
-		0
+		60,
+		260
 	],
-	"healthicon": "douyhe",
+	"healthicon": "doyne",
 	"flip_x": false,
 	"healthbar_colors": [
-		55,
-		90,
-		207
+		255,
+		255,
+		255
 	],
 	"camera_position": [
-		0,
-		150
+		-190,
+		-20
 	],
-	"sing_duration": 4,
-	"scale": 1
+	"sing_duration": 6.1,
+	"scale": 1.7
 }

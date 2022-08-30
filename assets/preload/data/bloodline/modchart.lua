@@ -1,8 +1,6 @@
-defaultWindowPos = {256,256};
-Windowspeed = 0.69;
-WinmovementAmount = 40;
 local defaultNotePos = {};
 local spin = true;
+
 
 function onSongStart()
     for i = 0,7 do
@@ -28,6 +26,10 @@ function onUpdate(elapsed)
     end
 end
 
+defaultWindowPos = {256,256};
+Windowspeed = 0.69;
+WinmovementAmount = 40;
+
 function onUpdatePost(elapsed)
     if not inGameOver then 
         windowLoop(elapsed);
@@ -37,12 +39,13 @@ end
 
 function windowLoop(elapsed)
     if curStep >= 256 then
-        setPropertyFromClass("openfl.Lib", "application.window.x", defaultWindowPos[1] + WinmovementAmount * math.sin(((getSongPosition() / 1000)*(bpm/60) * Windowspeed) * math.pi))
-        setPropertyFromClass("openfl.Lib", "application.window.y", defaultWindowPos[2] + WinmovementAmount * math.cos(((getSongPosition() / 1000)*(bpm/60) * Windowspeed) * math.pi))
-        setPropertyFromClass("flixel.FlxG", "fullscreen", false)
-        setPropertyFromClass("openfl.Lib", "application.window.title", genWinName(20))
-    elseif curStep >= 512 then
-        close(true);
+        if curStep <= 512 then
+            setPropertyFromClass("openfl.Lib", "application.window.x", defaultWindowPos[1] + WinmovementAmount * math.sin(((getSongPosition() / 1000)*(bpm/60) * Windowspeed) * math.pi))
+            setPropertyFromClass("openfl.Lib", "application.window.y", defaultWindowPos[2] + WinmovementAmount * math.cos(((getSongPosition() / 1000)*(bpm/60) * Windowspeed) * math.pi))
+            setPropertyFromClass("flixel.FlxG", "fullscreen", false)
+            setPropertyFromClass("openfl.Lib", "application.window.title", genWinName(20))
     end
 
+
+end
 end
