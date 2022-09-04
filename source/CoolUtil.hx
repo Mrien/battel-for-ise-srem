@@ -22,8 +22,7 @@ class CoolUtil
 		'Normal',
 		'Hard',
 		'Devious',
-		'Extra',
-		'Lunatic'
+		'Extra'
 	];
 	public static var defaultDifficulty:String = 'Normal'; //The chart that has no suffix and starting difficulty on Freeplay/Story Mode
 

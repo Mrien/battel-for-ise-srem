@@ -53,6 +53,8 @@ class FunkinLua {
 	public static var Function_Continue:Dynamic = 0;
 	public static var Function_StopLua:Dynamic = 2;
 
+	public static var modversion:String = '1.0';
+
 	//public var errorHandler:String->Void;
 	#if LUA_ALLOWED
 	public var lua:State = null;
@@ -142,6 +144,7 @@ class FunkinLua {
 		set('ratingName', '');
 		set('ratingFC', '');
 		set('version', MainMenuState.psychEngineVersion.trim());
+		set('modversion', modversion.trim());
 
 		set('inGameOver', false);
 		set('mustHitSection', false);

@@ -45,7 +45,7 @@ class CreditsState extends MusicBeatState
 		#end
 
 		persistentUpdate = true;
-		bg = new FlxSprite().loadGraphic(Paths.image('menuBGMagenta'));
+		bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
 		add(bg);
 		bg.screenCenter();
 		
@@ -81,6 +81,13 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Ice Cream Team'],
+			['morry',		        'morry',		    'Director, Main Animator/Composer and Artist',				    'https://www.youtube.com/channel/UCVU1zqHJaXLhkZ5VxLf4yGQ',	'FFFFFF'],
+			['Sponcer',			    'sponcer',			'Main Programmer',							                    'https://twitter.com/SponcerDoesShit',	                    '0AFF2A'],
+			['miojo157',			'miojo157',			'Background Artist',						                    'https://www.youtube.com/channel/UCB_i1N_8yLaw36PCahKKblg',	'7F29A0'],
+			['Hipix',               'hipix',			'Main Artist and Composer',						                'https://www.youtube.com/channel/UCHuXrDurJALQUPTJ56rW0qw',	'F3F3F3'],
+			['SonicWithATopHat',    'SWATH',			'Modcharter',						                            'https://www.youtube.com/channel/UCTdwiJi5Ft0YhAi6LX7bfrQ',	'000CDC'],
+			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],

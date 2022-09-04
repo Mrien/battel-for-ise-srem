@@ -58,6 +58,7 @@ class FreeplayCategory2State extends MusicBeatState
 		
 		persistentUpdate = true;
 		PlayState.isStoryMode = false;
+		FreeplaySelectState.freeplay2 = true;
 		WeekData.reloadWeekFiles(false);
 
 		#if desktop
@@ -314,6 +315,7 @@ class FreeplayCategory2State extends MusicBeatState
 				colorTween.cancel();
 			}
 			FlxG.sound.play(Paths.sound('cancelMenu'));
+			FreeplaySelectState.freeplay2 = false;
 			MusicBeatState.switchState(new FreeplaySelectState());
 		}
 

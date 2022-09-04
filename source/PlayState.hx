@@ -1041,7 +1041,7 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+		timeBar.createFilledBar(0xFF000000, 0xFFFFD800);
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
@@ -1330,12 +1330,19 @@ class PlayState extends MusicBeatState
 					
 				case 'murky':
 					startDialogue(dialogueJson);
+					timeBar.createFilledBar(0xFF000000, 0xFFFF9800);
 	
 				case 'bloodline':
 					startDialogue(dialogueJson);
 					trace("bleed");
+					timeBar.createFilledBar(0xFF000000, 0xFF690100);
+
 					healthBar.visible = false;
 					healthBarBG.visible = false;
+
+				case 'pizzaroni':
+					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
+					startCountdown();
 	
 				default:
 					startCountdown();
@@ -1351,15 +1358,24 @@ class PlayState extends MusicBeatState
 				
 				case 'murky':
 					startDialogue(dialogueJson);
+					timeBar.createFilledBar(0xFF000000, 0xFFFF9800);
 
 				case 'bloodline':
 					startDialogue(dialogueJson);
 					trace("bleed");
+					timeBar.createFilledBar(0xFF000000, 0xFF690100);
+
 					healthBar.visible = false;
 					healthBarBG.visible = false;
 
+				case 'pizzaroni':
+					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
+					startCountdown();
+
 				case 'rushed':
 					icecreamIcon.loadGraphic(Paths.image('soup'));
+					
+					timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
 					startCountdown();
 
 				default:

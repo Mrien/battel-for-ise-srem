@@ -1,10 +1,9 @@
-function onSongStart()
-    function onUpdate()
-        doTweenAngle('turn', 'camHUD', math.cos(curBeat) * 50, 3, 'linear')
-        if curBeat >= 64.1 then
-            doTweenAngle('turngame', 'camGame', math.cos(curBeat) * 50, 3, 'linear')
-    end
+function onCreatePost()
+    makeLuaText("message", "OH NO", 500, 30, 90)
+    setTextAlignment("message", "left")
+    addLuaText("message")
 
-    
+    if getPropertyFromClass('ClientPrefs', 'downScroll') == false then
+        setProperty('message.y', 700)
     end
 end
