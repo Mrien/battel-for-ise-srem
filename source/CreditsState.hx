@@ -97,6 +97,7 @@ class CreditsState extends MusicBeatState
 			['Repeater/Sploingy',   'sploingy',			'Repeater',						                                'https://www.youtube.com/channel/UC4xt0sj_NJV-At8dAXCV2mw',	'FFC90E'],
 			['Subway Ron',          'subway',			'Subway Ron',						                            'https://www.youtube.com/channel/UCw8t5g_Nxsm0fO99kl1D7qQ',	'3EBD43'],
 			['Ronathin/Rønbon',     'ronathin',			'Ronathin',						                                'https://www.youtube.com/c/R%C3%B8nbonRonathin',	        'FFD400'],
+			[''],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],
