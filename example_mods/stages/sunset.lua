@@ -3,7 +3,7 @@ function onCreate()
 	makeLuaSprite('roadandbuildings', 'roadmurky', -620, -220);
 	setScrollFactor('roadandbuildings', 1, 1);
 
-	makeLuaSprite('cameos', 'cameos', -570, 20);
+	makeLuaSprite('cameos', 'cameosSunset', -570, 20);
 	setScrollFactor('cameos', 1, 1);
 	scaleObject('cameos', 0.7, 0.7);
 

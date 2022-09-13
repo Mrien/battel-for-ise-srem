@@ -3,6 +3,17 @@
 		{
 			"loop": false,
 			"offsets": [
+				-5,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "BF idle dance instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
 				5,
 				-6
 			],
@@ -80,6 +91,17 @@
 		{
 			"loop": false,
 			"offsets": [
+				-10,
+				-16
+			],
+			"anim": "dodge",
+			"fps": 24,
+			"name": "boyfriend dodge instance 1",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
 				294,
 				267
 			],
@@ -89,40 +111,29 @@
 			"indices": []
 		},
 		{
-			"offsets": [
-				-5,
-				0
-			],
 			"loop": false,
-			"fps": 24,
-			"anim": "idle",
-			"indices": [],
-			"name": "BF idle dance instance 1"
-		},
-		{
 			"offsets": [
 				-40,
 				-40
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "pre-attack",
-			"indices": [],
-			"name": "bf pre attack instance 1"
+			"fps": 24,
+			"name": "bf pre attack instance 1",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/bbsleepdeprived",
+	"image": "characters/bbMurky",
 	"position": [
 		0,
 		350
 	],
-	"healthicon": "bb",
+	"healthicon": "bbsunset",
 	"flip_x": true,
 	"healthbar_colors": [
-		0,
-		162,
-		255
+		35,
+		103,
+		0
 	],
 	"camera_position": [
 		0,

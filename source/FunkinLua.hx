@@ -53,7 +53,7 @@ class FunkinLua {
 	public static var Function_Continue:Dynamic = 0;
 	public static var Function_StopLua:Dynamic = 2;
 
-	public static var modversion:String = '1.0';
+	public static var modversion:String = '1.2';
 
 	//public var errorHandler:String->Void;
 	#if LUA_ALLOWED

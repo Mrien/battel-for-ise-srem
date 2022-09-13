@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bb",
+		"player1": "bb-sunset",
 		"player2": "ron-mad",
 		"events": [
 			[
@@ -5920,7 +5920,7 @@
 				"mustHitSection": true
 			}
 		],
-		"gfVersion": "gf",
+		"gfVersion": "gf-sunset",
 		"splashSkin": "noteSplashes",
 		"song": "Murky",
 		"validScore": true,
