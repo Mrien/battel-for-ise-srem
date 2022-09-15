@@ -9,7 +9,7 @@ function onSongStart()
         y = getPropertyFromGroup('strumLineNotes', i, 'y')
 
         table.insert(defaultNotePos, {x,y})
-      --  debugPrint("{" .. x .. "," .. y .. "}" .. " i:".. i)
+        debugPrint("{" .. x .. "," .. y .. "}" .. " i:".. i)
     end
 end
 

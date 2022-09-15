@@ -50,6 +50,8 @@ class FreeplayCategory3State extends MusicBeatState
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
+	var extraSongs:Array<String> = ["Rushed"];
+
 	override function create()
 	{
 		addSong('Rushed', 2, 'rin', FlxColor.fromRGB(255, 255, 255));
@@ -419,7 +421,13 @@ class FreeplayCategory3State extends MusicBeatState
 		#end
 
 		PlayState.storyDifficulty = curDifficulty;
-		diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
+
+		var difficulty:String = CoolUtil.difficultyString();
+
+		if (extraSongs.contains(songs[curSelected].songName))
+			difficulty = "EXTRAS";
+
+		diffText.text = '< ' + difficulty + ' >';
 		positionHighscore();
 	}
 
