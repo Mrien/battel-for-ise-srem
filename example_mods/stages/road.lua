@@ -1,9 +1,9 @@
 function onCreate()
 	-- background shit
-	makeLuaSprite('roadandbuildings', 'road', -620, -220);
+	makeLuaSprite('roadandbuildings', 'stages/road', -620, -220);
 	setScrollFactor('roadandbuildings', 1, 1);
 
-	makeLuaSprite('cameos', 'cameos', -570, 20);
+	makeLuaSprite('cameos', 'stages/cameos', -570, 20);
 	setScrollFactor('cameos', 1, 1);
 	scaleObject('cameos', 0.7, 0.7);
 

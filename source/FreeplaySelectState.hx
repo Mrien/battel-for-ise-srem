@@ -10,7 +10,7 @@ import flixel.FlxG;
 class FreeplaySelectState extends MusicBeatState{
 	public static var freeplay2:Bool;
 	public static var freeplay3:Bool;
-    var freeplayCats:Array<String> = ['Main', 'Douyhe', 'Extras'];
+    var freeplayCats:Array<String> = ['Main', 'Douyhe', 'Extras', 'Dev Stuff'];
 	var grpCats:FlxTypedGroup<Alphabet>;
 	var curSelected:Int = 0;
 	var bg:FlxSprite;
@@ -20,7 +20,7 @@ class FreeplaySelectState extends MusicBeatState{
 		DiscordClient.changePresence("Selecting a Freeplay Category", null);
 		#end
 
-        bg = new FlxSprite().loadGraphic(Paths.image('menuDesat'));
+        bg = new FlxSprite().loadGraphic(Paths.image('menuBGMagenta'));
 		bg.updateHitbox();
 		bg.screenCenter();
 		add(bg);
@@ -56,6 +56,8 @@ class FreeplaySelectState extends MusicBeatState{
                 MusicBeatState.switchState(new FreeplayCategory2State());
 				case 2:
 				MusicBeatState.switchState(new FreeplayCategory3State());
+				case 3:
+				MusicBeatState.switchState(new FreeplayDeveloperState());
             }
         }
         super.update(elapsed);

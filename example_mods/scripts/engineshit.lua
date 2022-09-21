@@ -7,7 +7,7 @@ function onCreatePost() --script made by impostor, credit me now or i will do an
     setTextAlignment("composer", "left")
     addLuaText("composer")
 
-    makeLuaText("version", "V.S. Ron "..modversion.." | Ice Cream Engine (PE "..version..")", 500, 30, 50)
+    makeLuaText("version", "VS. Ron "..modversion.." | Ice Cream Engine (PE "..version..")", 500, 30, 50)
     setTextAlignment("version", "left")
     addLuaText("version")
 

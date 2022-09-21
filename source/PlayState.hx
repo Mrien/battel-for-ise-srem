@@ -1340,6 +1340,8 @@ class PlayState extends MusicBeatState
 					healthBar.visible = false;
 					healthBarBG.visible = false;
 
+					health == 2;
+
 				case 'pizzaroni':
 					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
 					startCountdown();
@@ -1367,6 +1369,8 @@ class PlayState extends MusicBeatState
 
 					healthBar.visible = false;
 					healthBarBG.visible = false;
+
+					health == 2;
 
 				case 'pizzaroni':
 					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
@@ -4494,6 +4498,32 @@ class PlayState extends MusicBeatState
 		if (Paths.formatToSongPath(SONG.song) != 'tutorial')
 			camZooming = true;
 
+		if(SONG.player2 == 'ron')
+		{
+			if(health >= 0.005)
+			{
+				health -= 0.005;
+			}
+		}
+		else if(SONG.player2 == 'ron-mad')
+		{
+			if(health >= 0.01)
+			{
+				health -= 0.01;
+			}
+		}
+		else if(SONG.player2 == 'devilron')
+		{
+			health -= 0.015;
+		}
+		else if(SONG.player2 == 'doyne')
+		{
+			if(health >= 0.005)
+			{
+				health -= 0.005;
+			}
+		}
+		
 		if(note.noteType == 'Hey!' && dad.animOffsets.exists('hey')) {
 			dad.playAnim('hey', true);
 			dad.specialAnim = true;
