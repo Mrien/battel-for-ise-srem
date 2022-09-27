@@ -59,6 +59,7 @@ import StageData;
 import FunkinLua;
 import DialogueBoxPsych;
 import Conductor.Rating;
+import flash.system.System;
 #if sys
 import sys.FileSystem;
 #end
@@ -340,6 +341,9 @@ class PlayState extends MusicBeatState
 		rating.noteSplash = false;
 		ratingsData.push(rating);
 
+		var BSOD:FlxSprite = new FlxSprite(Paths.image('bsod'));
+		BSOD.scale.set(2, 2);
+
 		// For the "Just the Two of Us" achievement
 		for (i in 0...keysArray.length)
 		{
@@ -435,8 +439,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 		SONG.stage = curStage;
-
-		var stageData:StageFile = StageData.getStageFile(curStage);
+        var stageData:StageFile = StageData.getStageFile(curStage);
 		if(stageData == null) { //Stage couldn't be found, create a dummy stage for preventing a crash
 			stageData = {
 				directory: "",
@@ -1172,7 +1175,15 @@ class PlayState extends MusicBeatState
 		add(healthBar);
 		healthBarBG.sprTracker = healthBar;
 
-		icecreamIcon  = new FlxSprite().loadGraphic(Paths.image('icecream'));
+		if(curSong == 'Rushed')
+		{
+			icecreamIcon  = new FlxSprite(Paths.image('soup'));
+		}
+		else
+		{
+			icecreamIcon  = new FlxSprite(Paths.image('icecream'));
+		}
+
 		icecreamIcon.y = healthBar.y - 75;
 		icecreamIcon.visible = !ClientPrefs.hideHud;
 		icecreamIcon.alpha = ClientPrefs.healthBarAlpha;
@@ -1222,6 +1233,7 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
+		BSOD.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -1340,8 +1352,6 @@ class PlayState extends MusicBeatState
 					healthBar.visible = false;
 					healthBarBG.visible = false;
 
-					health == 2;
-
 				case 'pizzaroni':
 					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
 					startCountdown();
@@ -1370,16 +1380,12 @@ class PlayState extends MusicBeatState
 					healthBar.visible = false;
 					healthBarBG.visible = false;
 
-					health == 2;
-
 				case 'pizzaroni':
 					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
 					startCountdown();
 
 				case 'rushed':
-					icecreamIcon.loadGraphic(Paths.image('soup'));
-					
-					timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+                    timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
 					startCountdown();
 
 				default:
@@ -3308,7 +3314,13 @@ class PlayState extends MusicBeatState
 				for (timer in modchartTimers) {
 					timer.active = true;
 				}
-				openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
+				if(curSong == 'Bloodline') {
+					FlxG.sound.play(Paths.sound('bruh'), 0.7);
+					System.exit(0);
+				} else {
+					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
+				}
+				
 
 				// MusicBeatState.switchState(new GameOverState(boyfriend.getScreenPosition().x, boyfriend.getScreenPosition().y));
 
@@ -3533,7 +3545,7 @@ class PlayState extends MusicBeatState
 					if(Math.isNaN(camZoom)) camZoom = 0.015;
 					if(Math.isNaN(hudZoom)) hudZoom = 0.03;
 
-					FlxG.camera.zoom += camZoom;
+					defaultCamZoom += camZoom;
 					camHUD.zoom += hudZoom;
 				}
 
@@ -3567,7 +3579,7 @@ class PlayState extends MusicBeatState
 					char.specialAnim = true;
 				}
 
-			case 'Camera Follow Pos':
+			case 'Camera Follow Pos': //dick face
 				var val1:Float = Std.parseFloat(value1);
 				var val2:Float = Std.parseFloat(value2);
 				if(Math.isNaN(val1)) val1 = 0;
@@ -3840,7 +3852,7 @@ class PlayState extends MusicBeatState
 			}
 		}
 
-		timeBarBG.visible = false;
+		timeBarBG.visible = false; // i love you surprised bandu
 		timeBar.visible = false;
 		timeTxt.visible = false;
 		canPause = false;
@@ -4415,6 +4427,10 @@ class PlayState extends MusicBeatState
 				note.destroy();
 			}
 		});
+		if (combo >= 10 && gf.animOffsets.exists('sad'))
+		{
+			gf.playAnim('sad');
+		}
 		combo = 0;
 		health -= daNote.missHealth * healthLoss;
 		
@@ -4460,7 +4476,7 @@ class PlayState extends MusicBeatState
 				doDeathCheck(true);
 			}
 
-			if (combo > 5 && gf != null && gf.animOffsets.exists('sad'))
+			if (combo >= 10 && gf != null && gf.animOffsets.exists('sad'))
 			{
 				gf.playAnim('sad');
 			}
@@ -4515,6 +4531,7 @@ class PlayState extends MusicBeatState
 		else if(SONG.player2 == 'devilron')
 		{
 			health -= 0.015;
+			triggerEventNote("Screen Shake", "0.03, 0.1", "0.03, 0.1");
 		}
 		else if(SONG.player2 == 'doyne')
 		{
@@ -4906,6 +4923,66 @@ class PlayState extends MusicBeatState
 			|| (SONG.needsVoices && Math.abs(vocals.time - (Conductor.songPosition - Conductor.offset)) > 20))
 		{
 			resyncVocals();
+		}
+		//if (curSong == 'Iced')
+		//{
+			//switch (curStep)
+			//{
+				//case somethingsomethingblahblahblah:
+					//insert code for black bars do this later im lazy rn lol
+			//}
+		//}
+		
+		if (curSong == 'Murky') // the misery came
+		{                       // minnie just cheated on me
+			switch (curStep)    // she betrayed me
+			{                   // MY LIFE IS A LIE
+				case 704:
+					if(!dadMap.exists('littleman')) {
+						addCharacterToList('littleman', 1);
+					}
+
+					var wasGf:Bool = dad.curCharacter.startsWith('gf');
+					var lastAlpha:Float = dad.alpha;
+					dad.alpha = 0.00001;
+					dad = dadMap.get('littleman');
+					if(!dad.curCharacter.startsWith('gf')) {
+						if(wasGf && gf != null) {
+							gf.visible = true;
+						}
+					} else if(gf != null) {
+						gf.visible = false;
+					}
+					dad.alpha = lastAlpha;
+					iconP2.changeIcon(dad.healthIcon);
+				case 865:
+                    add(BSOD);
+				case 873:
+					remove(BSOD);
+				    SONG.speed = 3.1 * ClientPrefs.getGameplaySetting('scrollspeed', 1);
+
+					if(!dadMap.exists('ron-mad')) {
+						addCharacterToList('ron-mad', 1);
+					}
+
+					var wasGf:Bool = dad.curCharacter.startsWith('gf');
+					var lastAlpha:Float = dad.alpha;
+					dad.alpha = 0.00001;
+					dad = dadMap.get('ron-mad');
+					if(!dad.curCharacter.startsWith('gf')) {
+						if(wasGf && gf != null) {
+							gf.visible = true;
+						}
+					} else if(gf != null) {
+						gf.visible = false;
+					}
+					dad.alpha = lastAlpha;
+					iconP2.changeIcon(dad.healthIcon);
+				case 1078:
+				    SONG.speed = 2.8 * ClientPrefs.getGameplaySetting('scrollspeed', 1); // surprised bandu is a fucking bitch and he wont see this ever
+				case 2047:
+                    add(BSOD);
+			}
 		}
 
 		if(curStep == lastStepHit) {

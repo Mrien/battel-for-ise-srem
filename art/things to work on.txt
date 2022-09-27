@@ -1,3 +1,4 @@
-add bsod to murky
-add cinematics during doyne's solo in pizzaroni
 add new bonus song
+hardcode the engine text
+hardcode the lua scripts
+hardcode the events

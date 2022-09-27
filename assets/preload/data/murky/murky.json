@@ -7043,48 +7043,7 @@
 				"mustHitSection": true
 			}
 		],
-		"events": [
-			[
-				74893.6170212767,
-				[
-					[
-						"Change Character",
-						"dad",
-						"littleman"
-					]
-				]
-			],
-			[
-				92664.8936170214,
-				[
-					[
-						"Change Scroll Speed",
-						"1.11",
-						""
-					]
-				]
-			],
-			[
-				92739.8936170214,
-				[
-					[
-						"Change Character",
-						"dad",
-						"ron-mad"
-					]
-				]
-			],
-			[
-				114714.893617021,
-				[
-					[
-						"Change Scroll Speed",
-						"1",
-						""
-					]
-				]
-			]
-		],
+		"events": [],
 		"player2": "ron-mad",
 		"splashSkin": "noteSplashes",
 		"song": "Murky",
