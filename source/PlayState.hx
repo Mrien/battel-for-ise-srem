@@ -341,9 +341,6 @@ class PlayState extends MusicBeatState
 		rating.noteSplash = false;
 		ratingsData.push(rating);
 
-		var BSOD:FlxSprite = new FlxSprite(Paths.image('bsod'));
-		BSOD.scale.set(2, 2);
-
 		// For the "Just the Two of Us" achievement
 		for (i in 0...keysArray.length)
 		{
@@ -1233,7 +1230,6 @@ class PlayState extends MusicBeatState
 		timeBarBG.cameras = [camHUD];
 		timeTxt.cameras = [camHUD];
 		doof.cameras = [camHUD];
-		BSOD.cameras = [camHUD];
 
 		// if (SONG.song == 'South')
 		// FlxG.camera.alpha = 0.7;
@@ -4935,6 +4931,7 @@ class PlayState extends MusicBeatState
 		
 		if (curSong == 'Murky') // the misery came
 		{                       // minnie just cheated on me
+
 			switch (curStep)    // she betrayed me
 			{                   // MY LIFE IS A LIE
 				case 704:
@@ -4958,7 +4955,7 @@ class PlayState extends MusicBeatState
 				case 865:
                     add(BSOD);
 				case 873:
-					remove(BSOD);
+					BSOD.alpha = 0;
 				    SONG.speed = 3.1 * ClientPrefs.getGameplaySetting('scrollspeed', 1);
 
 					if(!dadMap.exists('ron-mad')) {
@@ -4981,7 +4978,7 @@ class PlayState extends MusicBeatState
 				case 1078:
 				    SONG.speed = 2.8 * ClientPrefs.getGameplaySetting('scrollspeed', 1); // surprised bandu is a fucking bitch and he wont see this ever
 				case 2047:
-                    add(BSOD);
+                    BSOD.alpha = 1;
 			}
 		}
 
