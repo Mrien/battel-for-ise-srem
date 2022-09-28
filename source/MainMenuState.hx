@@ -256,6 +256,24 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
+			else if (FlxG.keys.justPressed.B)
+			{
+				selectedSomethin = true;
+
+				FlxTransitionableState.skipNextTransIn = true;
+
+				var songLowercase:String = Paths.formatToSongPath("Bloodline");
+				// var poop:String = Highscore.formatSong(songLowercase, 2);
+
+				PlayState.SONG = Song.loadFromJson('bloodline-alt', songLowercase);
+				PlayState.isStoryMode = false;
+				PlayState.storyDifficulty = 3;
+				PlayState.campaignMisses = 0;
+
+				FlxG.sound.music.volume = 0;
+
+				LoadingState.loadAndSwitchState(new PlayState());
+			}
 			#if desktop
 			else if (FlxG.keys.anyJustPressed(debugKeys))
 			{

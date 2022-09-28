@@ -2807,10 +2807,10 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
-		/*if (FlxG.keys.justPressed.NINE)
+		if (FlxG.keys.justPressed.NINE)
 		{
 			iconP1.swapOldIcon();
-		}*/
+		}
 		callOnLuas('onUpdate', [elapsed]);
 
 		switch (curStage)
@@ -4527,7 +4527,7 @@ class PlayState extends MusicBeatState
 		else if(SONG.player2 == 'devilron')
 		{
 			health -= 0.015;
-			triggerEventNote("Screen Shake", "0.03, 0.1", "0.03, 0.1");
+			camGame.shake(0.03, 0.1);
 		}
 		else if(SONG.player2 == 'doyne')
 		{
@@ -4952,10 +4952,7 @@ class PlayState extends MusicBeatState
 					}
 					dad.alpha = lastAlpha;
 					iconP2.changeIcon(dad.healthIcon);
-				case 865:
-                    add(BSOD);
 				case 873:
-					BSOD.alpha = 0;
 				    SONG.speed = 3.1 * ClientPrefs.getGameplaySetting('scrollspeed', 1);
 
 					if(!dadMap.exists('ron-mad')) {
@@ -4977,8 +4974,6 @@ class PlayState extends MusicBeatState
 					iconP2.changeIcon(dad.healthIcon);
 				case 1078:
 				    SONG.speed = 2.8 * ClientPrefs.getGameplaySetting('scrollspeed', 1); // surprised bandu is a fucking bitch and he wont see this ever
-				case 2047:
-                    BSOD.alpha = 1;
 			}
 		}
 
