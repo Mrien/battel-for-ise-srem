@@ -1,4 +1,2 @@
 add new bonus song
 hardcode the engine text
-hardcode the lua scripts
-hardcode the events

@@ -50,6 +50,10 @@ class FreeplayDeveloperState extends MusicBeatState
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
+	var extraSongs:Array<String> = ["Rushed"];
+	var hellSongs:Array<String> = ["Bloodline"];
+	var hellSongs2:Array<String> = ["Bloodstream"];
+
 	override function create()
 	{
 		//Paths.clearStoredMemory();
@@ -427,7 +431,15 @@ class FreeplayDeveloperState extends MusicBeatState
 		#end
 
 		PlayState.storyDifficulty = curDifficulty;
-		diffText.text = '< ' + CoolUtil.difficultyString() + ' >';
+
+		var difficulty:String = CoolUtil.difficultyString();
+
+		if (extraSongs.contains(songs[curSelected].songName))
+			difficulty = "EXTRAS";
+        else if (hellSongs2.contains(songs[curSelected].songName))
+			difficulty = "HELL";
+
+		diffText.text = '< ' + difficulty + ' >';
 		positionHighscore();
 	}
 
@@ -453,6 +465,19 @@ class FreeplayDeveloperState extends MusicBeatState
 					colorTween = null;
 				}
 			});
+		}
+
+		if (hellSongs2.contains(songs[curSelected].songName))
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+		
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.RED);
+		}
+		else if (diffText.color != FlxColor.WHITE)
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+		
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.WHITE);
 		}
 
 		// selector.y = (70 * curSelected) + 30;
@@ -506,6 +531,15 @@ class FreeplayDeveloperState extends MusicBeatState
 				}
 				--i;
 			}
+
+			if (hellSongs.contains(songs[curSelected].songName))
+				if(FlxG.save.data.bloodlineAltUnlocked)
+					diffs = [
+						'Easy',
+						'Normal',
+						'Hard',
+						'Alt'
+					];
 
 			if(diffs.length > 0 && diffs[0].length > 0)
 			{

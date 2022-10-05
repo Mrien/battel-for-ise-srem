@@ -219,7 +219,7 @@ class ChartingState extends MusicBeatState
 				player2: 'ron',
 				gfVersion: 'gf',
 				speed: 1,
-				stage: 'stage',
+				stage: 'road',
 				validScore: false
 			};
 			addSection();

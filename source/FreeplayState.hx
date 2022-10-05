@@ -50,6 +50,8 @@ class FreeplayState extends MusicBeatState
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
+	var hellSongs:Array<String> = ["Bloodline"];
+
 	override function create()
 	{
 		addSong('Iced', 0, 'ron', FlxColor.fromRGB(255, 216, 0));
@@ -498,6 +500,15 @@ class FreeplayState extends MusicBeatState
 				}
 				--i;
 			}
+
+			if (hellSongs.contains(songs[curSelected].songName))
+				if(FlxG.save.data.bloodlineAltUnlocked)
+					diffs = [
+						'Easy',
+						'Normal',
+						'Hard',
+						'Alt'
+					];
 
 			if(diffs.length > 0 && diffs[0].length > 0)
 			{

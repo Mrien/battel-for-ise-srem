@@ -4920,15 +4920,7 @@ class PlayState extends MusicBeatState
 		{
 			resyncVocals();
 		}
-		//if (curSong == 'Iced')
-		//{
-			//switch (curStep)
-			//{
-				//case somethingsomethingblahblahblah:
-					//insert code for black bars do this later im lazy rn lol
-			//}
-		//}
-		
+
 		if (curSong == 'Murky') // the misery came
 		{                       // minnie just cheated on me
 

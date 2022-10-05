@@ -135,7 +135,7 @@ class MainMenuState extends MusicBeatState
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("rainyhearts", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
-		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "V.S. Ron: Battle for Ice Cream v" + Application.current.meta.get('version') + " (Build 1021)", 12);
+		var versionShit:FlxText = new FlxText(12, FlxG.height - 24, 0, "V.S. Ron: Battle for Ice Cream v" + Application.current.meta.get('version') + " (Build 1050)", 12);
 		versionShit.scrollFactor.set();
 		versionShit.setFormat("rainyhearts", 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		add(versionShit);
@@ -256,14 +256,16 @@ class MainMenuState extends MusicBeatState
 					});
 				}
 			}
-			else if (FlxG.keys.justPressed.B)
+			else if (FlxG.keys.justPressed.B && !FlxG.save.data.bloodlineAltUnlocked)
 			{
 				selectedSomethin = true;
 
 				FlxTransitionableState.skipNextTransIn = true;
 
 				var songLowercase:String = Paths.formatToSongPath("Bloodline");
-				// var poop:String = Highscore.formatSong(songLowercase, 2);
+				var poop:String = Highscore.formatSong(songLowercase, 3);
+
+				FlxG.save.data.bloodlineAltUnlocked = true;
 
 				PlayState.SONG = Song.loadFromJson('bloodline-alt', songLowercase);
 				PlayState.isStoryMode = false;

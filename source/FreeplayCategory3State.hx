@@ -51,10 +51,12 @@ class FreeplayCategory3State extends MusicBeatState
 	var colorTween:FlxTween;
 
 	var extraSongs:Array<String> = ["Rushed"];
+	var hellSongs:Array<String> = ["Bloodstream"];
 
 	override function create()
 	{
 		addSong('Rushed', 2, 'rin', FlxColor.fromRGB(255, 255, 255));
+		addSong('Bloodstream', 2, 'devilron', FlxColor.fromRGB(105, 1, 0));
 		Paths.clearStoredMemory();
 		Paths.clearUnusedMemory();
 		
@@ -426,6 +428,8 @@ class FreeplayCategory3State extends MusicBeatState
 
 		if (extraSongs.contains(songs[curSelected].songName))
 			difficulty = "EXTRAS";
+        else if (hellSongs.contains(songs[curSelected].songName))
+			difficulty = "HELL";
 
 		diffText.text = '< ' + difficulty + ' >';
 		positionHighscore();
@@ -453,6 +457,19 @@ class FreeplayCategory3State extends MusicBeatState
 					colorTween = null;
 				}
 			});
+		}
+
+		if (hellSongs.contains(songs[curSelected].songName))
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+	
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.RED);
+		}
+		else if (diffText.color != FlxColor.WHITE)
+		{
+			FlxTween.globalManager.cancelTweensOf(diffText);
+	
+			FlxTween.color(diffText, 0.5, diffText.color, FlxColor.WHITE);
 		}
 
 		// selector.y = (70 * curSelected) + 30;
