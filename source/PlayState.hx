@@ -835,6 +835,9 @@ class PlayState extends MusicBeatState
 			case 'cracked':
 				var cracked:BGSprite = new BGSprite('icecream/crackedroad', -620, -200);
 				add(cracked);
+			case 'void':
+				var whitevoid:BGSprite = new BGSprite('icecream/void', -810, -400, 0.9, 0.9);
+				add(whitevoid);
 		}
 
 		switch(Paths.formatToSongPath(SONG.song))
@@ -4278,8 +4281,13 @@ class PlayState extends MusicBeatState
 		comboSpr.visible = (!ClientPrefs.hideHud && showCombo);
 		comboSpr.x += ClientPrefs.comboOffset[0];
 		comboSpr.y -= ClientPrefs.comboOffset[1];
-		comboSpr.y += 60;
+		comboSpr.y += 20;
 		comboSpr.velocity.x += FlxG.random.int(1, 10);
+
+		if (combo >= 10)
+		{
+			showCombo = true;
+		}
 
 		insert(members.indexOf(strumLineNotes), rating);
 
