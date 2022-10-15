@@ -1,0 +1,68 @@
+{
+	"dialogue": [
+		{
+			"sound": "rontext",
+			"speed": 0.05,
+			"portrait": "ron",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "bloodline so easy smh"
+		},
+		{
+			"sound": "bftext",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "confused",
+			"text": "what"
+		},
+		{
+			"sound": "rontext",
+			"speed": 0.05,
+			"portrait": "ron",
+			"boxState": "normal",
+			"expression": "angy",
+			"text": "thats it\\nyou gon na die"
+		},
+		{
+			"sound": "rontext",
+			"speed": 0.05,
+			"portrait": "ron",
+			"boxState": "normal",
+			"expression": "smugass",
+			"text": "dont even try to bea tthis song you will never do it you blue hair midget"
+		},
+		{
+			"sound": "bftext",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "excited",
+			"text": "ok"
+		},
+		{
+			"sound": "rontext",
+			"speed": 0.05,
+			"portrait": "ron",
+			"boxState": "normal",
+			"expression": "angy",
+			"text": "PISSING AND SHITTING OUT A WINDOW\\nARE TWO DIFFERENT THINGS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+		},
+		{
+			"sound": "bftext",
+			"speed": 0.05,
+			"portrait": "bf",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Boyfriend is a young, light-skinned man with spiky cyan hair and a confident expression. He wears a magenta-white T-shirt with a red prohibition sign, baggy dark blue pants, pink-red sneakers with magenta-white shoelaces and soles as well as black dots on the quarters, and a backward pink-red cap with a dark blue brim. He holds a bluish gray microphone in his right hand while keeping his left hand in his pocket. He is drawn in a chibi style, giving the impression that he is very small and/or disproportionate. His icons depict only his head in blue without a mouth, and the old one represents a simpler design, having a yellow-green color with light blue pupils and an open smile, while the unused version is a fusion of both, having a simple design, blue color, an expression that resembles Angry Faic and a backward red cap. The unused winning icon also has sunglasses"
+		},
+		{
+			"sound": "bobtext",
+			"speed": 0.05,
+			"portrait": "bob",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "coolswag"
+		}
+	]
+}

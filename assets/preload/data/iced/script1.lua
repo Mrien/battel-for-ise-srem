@@ -24,6 +24,9 @@ function onStepHit()
         doTweenAlpha('healthbaralpha1', 'healthBarBG', 0, 0.1)
         doTweenAlpha('healthbaralpha2', 'healthBar', 0, 0.1)
         doTweenAlpha('scoretextalpha', 'scoreTxt', 0, 0.1)
+        doTweenAlpha('enginetextalpha', 'engineTxt', 0, 0.1)
+        doTweenAlpha('composertextalpha', 'composerTxt', 0, 0.1)
+        doTweenAlpha('messagetextalpha', 'messageTxt', 0, 0.1)
         doTweenAlpha('iconp1alpha', 'iconP1', 0, 0.1)
         doTweenAlpha('iconp2alpha', 'iconP2', 0, 0.1)
         doTweenAlpha('icecreamiconalpha', 'icecreamIcon', 0, 0.1)
@@ -59,6 +62,9 @@ function onStepHit()
         doTweenAlpha('healthbaralpha1', 'healthBarBG', 1, 0.1)
         doTweenAlpha('healthbaralpha2', 'healthBar', 1, 0.1)
         doTweenAlpha('scoretextalpha', 'scoreTxt', 1, 0.1)
+        doTweenAlpha('enginetextalpha', 'engineTxt', 1, 0.1)
+        doTweenAlpha('composertextalpha', 'composerTxt', 1, 0.1)
+        doTweenAlpha('messagetextalpha', 'messageTxt', 1, 0.1)
         doTweenAlpha('iconp1alpha', 'iconP1', 1, 0.1)
         doTweenAlpha('iconp2alpha', 'iconP2', 1, 0.1)
         doTweenAlpha('timebaralpha1', 'timeBar', 1, 0.1)
@@ -76,16 +82,18 @@ function onStepHit()
         noteTweenAlpha('notealpha7', 6, 1, 0.1)
         noteTweenAlpha('notealpha8', 7, 1, 0.1)
 
-        --flash
-        makeLuaSprite('flash', '', 0, 0);
-        makeGraphic('flash', 1280, 720, 'ffffff')
-	    addLuaSprite('flash', true);
-	    setLuaSpriteScrollFactor('flash', 0, 0)
-	    setProperty('flash.scale.x', 2)
-	    setProperty('flash.scale.y', 2)
-	    setProperty('flash.alpha', 0)
-		setProperty('flash.alpha', 1)
-		doTweenAlpha('flashalpha', 'flash', 0, 1, 'linear')
+        if getPropertyFromClass('ClientPrefs', 'flashing') == true then
+            --flash
+            makeLuaSprite('flash', '', 0, 0);
+            makeGraphic('flash', 1280, 720, 'ffffff')
+	        addLuaSprite('flash', true);
+	        setLuaSpriteScrollFactor('flash', 0, 0)
+	        setProperty('flash.scale.x', 2)
+	        setProperty('flash.scale.y', 2)
+	        setProperty('flash.alpha', 0)
+		    setProperty('flash.alpha', 1)
+		    doTweenAlpha('flashalpha', 'flash', 0, 1, 'linear')
+        end
 
     end
 

@@ -39,6 +39,7 @@ import flixel.util.FlxStringUtil;
 import flixel.util.FlxTimer;
 import haxe.Json;
 import lime.utils.Assets;
+import lime.app.Application;
 import openfl.Lib;
 import openfl.display.BlendMode;
 import openfl.display.StageQuality;
@@ -253,6 +254,9 @@ class PlayState extends MusicBeatState
 	public var songHits:Int = 0;
 	public var songMisses:Int = 0;
 	public var scoreTxt:FlxText;
+	public var engineTxt:FlxText;
+	public var composerTxt:FlxText;
+	public var messageTxt:FlxText;
 	var timeTxt:FlxText;
 	var scoreTxtTween:FlxTween;
 
@@ -277,7 +281,7 @@ class PlayState extends MusicBeatState
 
 	#if desktop
 	// Discord RPC variables
-	var storyDifficultyText:String = "";
+	public static var storyDifficultyText:String = "";
 	var detailsText:String = "";
 	var detailsPausedText:String = "";
 	#end
@@ -427,7 +431,7 @@ class PlayState extends MusicBeatState
 					curStage = 'road';
 				case 'murky':
 					curStage = 'sunset';
-				case 'bloodline':
+				case 'bloodline' | 'bloodstream':
 					curStage = 'cracked';
 				case 'rushed':
 					curStage = 'void';
@@ -807,6 +811,30 @@ class PlayState extends MusicBeatState
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank4', 1300, 900, 1.5, 1.5, ['fg']));
 				foregroundSprites.add(new BGSprite('tank5', 1620, 700, 1.5, 1.5, ['fg']));
 				if(!ClientPrefs.lowQuality) foregroundSprites.add(new BGSprite('tank3', 1300, 1200, 3.5, 2.5, ['fg']));
+
+			case 'road':
+			    var roadandbuildings:BGSprite = new BGSprite('icecream/road', -620, -200);
+				add(roadandbuildings);
+
+				if(!ClientPrefs.lowQuality)
+				{
+					var cameos:BGSprite = new BGSprite('icecream/cameos', -1150, -100);
+					cameos.scale.set(0.7, 0.7);
+					add(cameos);
+				}
+			case 'sunset':
+				var roadSunset:BGSprite = new BGSprite('icecream/roadmurky', -620, -200);
+				add(roadSunset);
+	
+				if(!ClientPrefs.lowQuality)
+				{
+					var cameosSunset:BGSprite = new BGSprite('icecream/cameosSunset', -1150, -100);
+					cameosSunset.scale.set(0.7, 0.7);
+					add(cameosSunset);
+				}
+			case 'cracked':
+				var cracked:BGSprite = new BGSprite('icecream/crackedroad', -620, -200);
+				add(cracked);
 		}
 
 		switch(Paths.formatToSongPath(SONG.song))
@@ -1174,7 +1202,7 @@ class PlayState extends MusicBeatState
 
 		if(curSong == 'Rushed')
 		{
-			icecreamIcon  = new FlxSprite(Paths.image('soup'));
+			icecreamIcon  = new FlxSprite(Paths.image('SOUP'));
 		}
 		else
 		{
@@ -1206,6 +1234,127 @@ class PlayState extends MusicBeatState
 		scoreTxt.visible = !ClientPrefs.hideHud;
 		add(scoreTxt);
 
+		var engineThingy:String;
+		var engineRandomizer:Int = FlxG.random.int(0, 5);
+		switch(engineRandomizer)
+		{
+			case 0:
+				engineThingy = 'Ice Cream';
+			case 1:
+				engineThingy = 'Ron';
+			case 2:
+				engineThingy = 'Douyhe';
+			case 3:
+				engineThingy = 'Soup';
+			case 4:
+				engineThingy = 'your mom';
+			case 5:
+				engineThingy = 'Rin';
+			default:
+				engineThingy = 'fuck you';
+		}
+		var composerThingy:String;
+		switch(curSong.toLowerCase())
+		{
+			case 'pizzaroni':
+				composerThingy = 'Hipix';
+			case 'bloodstream':
+				composerThingy = 'SonicWithATophat';
+			default:
+				composerThingy = 'morry';
+		}
+		var fuckingamonguswow:String;
+		var doyouwantphone:Int = FlxG.random.int(0, 19);
+		switch(doyouwantphone)
+		{
+			case 0:
+				fuckingamonguswow = 'fuck you';
+			case 1:
+				fuckingamonguswow = 'SOUP!!!!!';
+			case 2:
+				fuckingamonguswow = 'douyhe, if you are seeing this,\nplease get back on the double date';
+			case 3: 
+				fuckingamonguswow = 'touch grass';
+			case 4:
+				fuckingamonguswow = 'AAAAAAAAAAAA';
+			case 5:
+				fuckingamonguswow = 'i listen to screwed for 1 hour';
+			case 6:
+				fuckingamonguswow = 'do you want a free dev build';
+			case 7:
+				fuckingamonguswow = 'what you know about rolling down in the deep';
+			case 8:
+				fuckingamonguswow = 'battle for ice cream > forgotten memes (this is a joke)';
+			case 9:
+				fuckingamonguswow = 'hi morry';
+			case 10:
+				fuckingamonguswow = 'FNF VS. Mouse - Welcome (Old)';
+			case 11:
+				fuckingamonguswow = 'when is zipbomb coming out';
+			case 12:
+				fuckingamonguswow = 'cock fuckin\'';
+			case 13:
+				fuckingamonguswow = 'DID YOU JUST POST A MEME IN #general?!';
+			case 14:
+				fuckingamonguswow = 'weed';
+			case 15:
+				fuckingamonguswow = 'number 15, burger king foot lettuce';
+			case 16:
+				fuckingamonguswow = 'I am sand undertale go into my eye';
+			case 17:
+				fuckingamonguswow = 'My ass';
+			case 18:
+				fuckingamonguswow = 'we are collabing with vs grandis totally real';
+			case 19:
+				fuckingamonguswow = 'ballin\'';
+			default:
+				fuckingamonguswow = 'i see you snooping in the code';
+		}
+
+		switch(curSong.toLowerCase())
+		{
+			case 'bloodline' | 'bloodstream':
+				fuckingamonguswow = 'OH NO';
+			case 'rushed':
+				fuckingamonguswow = 'SOUP!!!!!';
+		}
+
+		engineTxt = new FlxText(30, 0, 0, "", 15);
+		if(ClientPrefs.downScroll)
+			engineTxt.y = 50;
+		else
+			engineTxt.y = 660;
+		engineTxt.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		engineTxt.scrollFactor.set();
+		engineTxt.borderSize = 1.25;
+		engineTxt.visible = !ClientPrefs.hideHud;
+		engineTxt.text = 'VS. Ron ' + Application.current.meta.get('version') + ' - ' + engineThingy + ' Engine (PE ' + MainMenuState.psychEngineVersion + ')';
+		add(engineTxt);
+
+		composerTxt = new FlxText(30, 0, 0, "", 15);
+		if(ClientPrefs.downScroll)
+			composerTxt.y = 70;
+		else
+			composerTxt.y = 680;
+		composerTxt.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		composerTxt.scrollFactor.set();
+		composerTxt.borderSize = 1.25;
+		composerTxt.visible = !ClientPrefs.hideHud;
+		composerTxt.text = SONG.song + ' ' + storyDifficultyText + ' - By ' + composerThingy;
+		add(composerTxt);
+
+		messageTxt = new FlxText(30, 0, 0, "", 15);
+		if(ClientPrefs.downScroll)
+			messageTxt.y = 90;
+		else
+			messageTxt.y = 700;
+		messageTxt.setFormat(Paths.font("vcr.ttf"), 15, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
+		messageTxt.scrollFactor.set();
+		messageTxt.borderSize = 1.25;
+		messageTxt.visible = !ClientPrefs.hideHud;
+		messageTxt.text = fuckingamonguswow;
+		add(messageTxt);
+
 		botplayTxt = new FlxText(400, timeBarBG.y + 55, FlxG.width - 800, "skill issue", 32);
 		botplayTxt.setFormat(Paths.font("vcr.ttf"), 32, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		botplayTxt.scrollFactor.set();
@@ -1225,6 +1374,9 @@ class PlayState extends MusicBeatState
 		iconP1.cameras = [camHUD];
 		iconP2.cameras = [camHUD];
 		scoreTxt.cameras = [camHUD];
+		engineTxt.cameras = [camHUD];
+		composerTxt.cameras = [camHUD];
+		messageTxt.cameras = [camHUD];
 		botplayTxt.cameras = [camHUD];
 		timeBar.cameras = [camHUD];
 		timeBarBG.cameras = [camHUD];
@@ -1383,6 +1535,15 @@ class PlayState extends MusicBeatState
 				case 'rushed':
                     timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
 					startCountdown();
+
+				case 'bloodstream':
+					trace("welp you're dead");
+					timeBar.createFilledBar(0xFF000000, 0xFF690100);
+
+					healthBar.visible = false;
+					healthBarBG.visible = false;
+					
+					startDialogue(dialogueJson);
 
 				default:
 					startCountdown();
@@ -2246,7 +2407,7 @@ class PlayState extends MusicBeatState
 		+ ' | Accuracy: ' + '${Highscore.floorDecimal(ratingPercent * 100, 2)}%'
 		+ ' | Rank: ' + ratingName
 		+ (ratingName != '?' ? ' | $ratingFC' : '');
-
+		
 		if(ClientPrefs.scoreZoom && !miss && !cpuControlled)
 		{
 			if(scoreTxtTween != null) {
@@ -3313,6 +3474,9 @@ class PlayState extends MusicBeatState
 				if(curSong == 'Bloodline') {
 					FlxG.sound.play(Paths.sound('bruh'), 0.7);
 					System.exit(0);
+				} else if(curSong == 'Bloodstream') {
+					lime.app.Application.current.window.alert('try again bozo', 'L');
+					System.exit(0);
 				} else {
 					openSubState(new GameOverSubstate(boyfriend.getScreenPosition().x - boyfriend.positionArray[0], boyfriend.getScreenPosition().y - boyfriend.positionArray[1], camFollowPos.x, camFollowPos.y));
 				}
@@ -3623,7 +3787,7 @@ class PlayState extends MusicBeatState
 					if(Math.isNaN(duration)) duration = 0;
 					if(Math.isNaN(intensity)) intensity = 0;
 
-					if(duration > 0 && intensity != 0) {
+					if(duration > 0 && intensity != 0 && ClientPrefs.shaking) {
 						targetsArray[i].shake(intensity, duration);
 					}
 				}
@@ -4527,7 +4691,8 @@ class PlayState extends MusicBeatState
 		else if(SONG.player2 == 'devilron')
 		{
 			health -= 0.015;
-			camGame.shake(0.03, 0.1);
+			if(ClientPrefs.shaking)
+			    camGame.shake(0.03, 0.1);
 		}
 		else if(SONG.player2 == 'doyne')
 		{
@@ -4921,6 +5086,20 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		}
 
+		if (curSong == 'Iced')
+		{
+
+			switch (curStep)
+			{
+				case 1008:
+					defaultCamZoom += 0.3;
+					camHUD.zoom += 0.3;
+				case 1024:
+					defaultCamZoom -= 0.3;
+					camHUD.zoom -= 0.3;
+			}
+		}
+
 		if (curSong == 'Murky') // the misery came
 		{                       // minnie just cheated on me
 
@@ -5003,6 +5182,21 @@ class PlayState extends MusicBeatState
 		iconP1.updateHitbox();
 		iconP2.updateHitbox();
 
+		if (curBeat % 1 == 0)
+		{
+			iconP1.angle = 20;
+			FlxTween.tween(iconP1, {angle: 0}, 0.2, {ease: FlxEase.circOut});
+			iconP2.angle = 20;
+			FlxTween.tween(iconP2, {angle: 0}, 0.2, {ease: FlxEase.circOut});
+		}
+		if (curBeat % 2 == 0)
+		{
+			iconP1.angle = -20;
+			FlxTween.tween(iconP1, {angle: 0}, 0.2, {ease: FlxEase.circOut});
+			iconP2.angle = -20;
+			FlxTween.tween(iconP2, {angle: 0}, 0.2, {ease: FlxEase.circOut});
+		}
+	
 		if (gf != null && curBeat % Math.round(gfSpeed * gf.danceEveryNumBeats) == 0 && gf.animation.curAnim != null && !gf.animation.curAnim.name.startsWith("sing") && !gf.stunned)
 		{
 			gf.dance();

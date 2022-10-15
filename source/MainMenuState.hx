@@ -270,6 +270,7 @@ class MainMenuState extends MusicBeatState
 				PlayState.SONG = Song.loadFromJson('bloodline-alt', songLowercase);
 				PlayState.isStoryMode = false;
 				PlayState.storyDifficulty = 3;
+				PlayState.storyDifficultyText = "Alt";
 				PlayState.campaignMisses = 0;
 
 				FlxG.sound.music.volume = 0;

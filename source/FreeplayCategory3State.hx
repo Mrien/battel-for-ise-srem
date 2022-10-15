@@ -50,7 +50,6 @@ class FreeplayCategory3State extends MusicBeatState
 	var intendedColor:Int;
 	var colorTween:FlxTween;
 
-	var extraSongs:Array<String> = ["Rushed"];
 	var hellSongs:Array<String> = ["Bloodstream"];
 
 	override function create()
@@ -147,6 +146,7 @@ class FreeplayCategory3State extends MusicBeatState
 
 		diffText = new FlxText(scoreText.x, scoreText.y + 36, 0, "", 24);
 		diffText.font = scoreText.font;
+		diffText.color = FlxColor.WHITE;
 		add(diffText);
 
 		add(scoreText);
@@ -382,7 +382,7 @@ class FreeplayCategory3State extends MusicBeatState
 			if (FlxG.keys.pressed.SHIFT){
 				LoadingState.loadAndSwitchState(new ChartingState());
 			}else{
-				LoadingState.loadAndSwitchState(new Cache());
+				LoadingState.loadAndSwitchState(new PlayState());
 			}
 
 			FlxG.sound.music.volume = 0;
@@ -426,10 +426,10 @@ class FreeplayCategory3State extends MusicBeatState
 
 		var difficulty:String = CoolUtil.difficultyString();
 
-		if (extraSongs.contains(songs[curSelected].songName))
-			difficulty = "EXTRAS";
-        else if (hellSongs.contains(songs[curSelected].songName))
+        if (hellSongs.contains(songs[curSelected].songName))
 			difficulty = "HELL";
+		else 
+			difficulty = "EXTRAS";
 
 		diffText.text = '< ' + difficulty + ' >';
 		positionHighscore();

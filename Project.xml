@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="The Epic Battle Against Ron For Ice Cream" file="rin" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="1.2" company="ShadowMario" />
+	<app title="The Epic Battle Against Ron For Ice Cream" file="Rin" packageName="com.shadowmario.psychengine" package="com.shadowmario.psychengine" main="Main" version="1.2" company="Ice Cream Team" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -62,7 +62,7 @@
 	<define name="CHECK_FOR_UPDATES" if="desktop officialBuild"/>
 
 	<!-- <define name="PRELOAD_ALL" /> -->
-	<define name="PRELOAD_ALL" unless="web" />
+	<define name="PRELOAD_ALL" unless="web || windows" />
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
 	
 	<library name="videos"        preload="true" />
