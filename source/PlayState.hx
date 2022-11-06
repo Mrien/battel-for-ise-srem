@@ -1072,7 +1072,19 @@ class PlayState extends MusicBeatState
 		timeBar = new FlxBar(timeBarBG.x + 4, timeBarBG.y + 4, LEFT_TO_RIGHT, Std.int(timeBarBG.width - 8), Std.int(timeBarBG.height - 8), this,
 			'songPercent', 0, 1);
 		timeBar.scrollFactor.set();
-		timeBar.createFilledBar(0xFF000000, 0xFFFFD800);
+		switch(SONG.player2)
+		{
+			case 'ron-mad':
+				timeBar.createFilledBar(0xFF000000, 0xFFFF9800);
+			case 'devilron':
+				timeBar.createFilledBar(0xFF000000, 0xFF690100);
+			case 'douyhe':
+				timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
+			case 'rin':
+				timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
+            default:
+				timeBar.createFilledBar(0xFF000000, 0xFFFFD800);
+		}
 		timeBar.numDivisions = 800; //How much lag this causes?? Should i tone it down to idk, 400 or 200?
 		timeBar.alpha = 0;
 		timeBar.visible = showTime;
@@ -1488,25 +1500,6 @@ class PlayState extends MusicBeatState
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
 
-				case 'iced':
-					startDialogue(dialogueJson);
-					
-				case 'murky':
-					startDialogue(dialogueJson);
-					timeBar.createFilledBar(0xFF000000, 0xFFFF9800);
-	
-				case 'bloodline':
-					startDialogue(dialogueJson);
-					trace("bleed");
-					timeBar.createFilledBar(0xFF000000, 0xFF690100);
-
-					healthBar.visible = false;
-					healthBarBG.visible = false;
-
-				case 'pizzaroni':
-					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
-					startCountdown();
-	
 				default:
 					startCountdown();
 			}
@@ -1514,44 +1507,31 @@ class PlayState extends MusicBeatState
 		}
 		else
 		{   
-			switch (daSong)
-			{
-				case 'iced':
-					startDialogue(dialogueJson);
-				
-				case 'murky':
-					startDialogue(dialogueJson);
-					timeBar.createFilledBar(0xFF000000, 0xFFFF9800);
-
-				case 'bloodline':
-					startDialogue(dialogueJson);
-					trace("bleed");
-					timeBar.createFilledBar(0xFF000000, 0xFF690100);
-
-					healthBar.visible = false;
-					healthBarBG.visible = false;
-
-				case 'pizzaroni':
-					timeBar.createFilledBar(0xFF000000, 0xFF375ACF);
-					startCountdown();
-
-				case 'rushed':
-                    timeBar.createFilledBar(0xFF000000, 0xFFFFFFFF);
-					startCountdown();
-
-				case 'bloodstream':
-					trace("welp you're dead");
-					timeBar.createFilledBar(0xFF000000, 0xFF690100);
-
-					healthBar.visible = false;
-					healthBarBG.visible = false;
-					
-					startDialogue(dialogueJson);
-
-				default:
-					startCountdown();
-			}
+			startCountdown();
 		}
+		switch (daSong)
+		{
+			case 'iced':
+				startDialogue(dialogueJson);
+				
+			case 'murky':
+				startDialogue(dialogueJson);
+
+			case 'bloodline':
+				startDialogue(dialogueJson);
+				trace("bleed");
+
+				healthBar.visible = false;
+				healthBarBG.visible = false;
+
+			case 'bloodstream':
+				trace("welp you're dead");
+
+				healthBar.visible = false;
+				healthBarBG.visible = false;
+					
+				startDialogue(dialogueJson);
+		    }
 		RecalculateRating();
 
 		//PRECACHING MISS SOUNDS BECAUSE I THINK THEY CAN LAG PEOPLE AND FUCK THEM UP IDK HOW HAXE WORKS
